@@ -100,25 +100,25 @@ value *must* be a valid, non-empty JSON string.
 `ignoreCase` specifies whether comparisons for this field should be case-sensitive or
 not. The value *must* be a boolean.
 
-> ***ignoreCase***: \[*true*|*false*\] (*default*: *false*)
+> ***ignoreCase***: \[*true*|*false*\] (*default*: ***false***)
 
 ##### index
 
 `index` causes the provider to index the given field to optimize searches. The value *must* be a boolean.
 
-> ***index***: \[*true*|*false*\] (*default*: *false*)
+> ***index***: \[*true*|*false*\] (*default*: ***false***)
 
 ##### multi
 
 `multi` specifies whether the field can contain multiple values or not. The value *must* be a boolean.
 
-> ***multi***: \[*true*|*false*\] (*default*: *false*)
+> ***multi***: \[*true*|*false*\] (*default*: ***false***)
 
 ##### required
 
 `required` specifies whether the field must be present. The value *must* be a boolean.
 
-> ***required***: \[*true*|*false*\] (*default*: *false*)
+> ***required***: \[*true*|*false*\] (*default*: ***false***)
 
 ##### unique
 

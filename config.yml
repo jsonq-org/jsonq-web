@@ -1,4 +1,12 @@
 production_url: "http://www.jsonq.org"
 
-"theme-bootstrap-2":
+widgets :
+    analytics :
+        use : google
+        tracking_id : 'UA-54191340-1'
+    google_prettify :
+      use : default
+      linenums : true
+
+"theme-jsonq":
     use: "theme"

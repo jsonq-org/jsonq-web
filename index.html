@@ -12,8 +12,8 @@
     <![endif]-->
 
     <!-- Le styles -->
-<link href='/assets/stylesheets/stylesheet-2fc885340f7ca2c1186cda87a5721af4.css' type='text/css' rel='stylesheet' media='all'>
-<link href='/assets/stylesheets/google_prettify/desert-9f5a5bacd53cac3acdeeb30b9b8a2d5e.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/assets/stylesheets/stylesheet-5b97a5ac160d4e8098412fd1afefaf9d.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/assets/stylesheets/google_prettify/desert-00eb6f3e954c4591e80db7afede04b30.css' type='text/css' rel='stylesheet' media='all'>
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -55,8 +55,52 @@
   <div class="span12">
     <h1 id="toc_0">What is JSONQ?</h1>
 
-<p>JSONQ is a JSON-based specification for data  access and storage. All operations are, fundamentally,
-able to be represented as <a href="http://www.json.org" title="JSON">JSON</a> documents.</p>
+<p>JSONQ is a JSON-based specification for data access and storage. All operations are, fundamentally,
+able to be represented as <a href="http://www.json.org" title="JSON">JSON</a> documents. By using JSON messages to represent data operations,
+JSONQ provides a flexible base layer for building asynchronous language bindings.</p>
+
+<h1 id="toc_1">Language Bindings</h1>
+
+<p>JSONQ is a language-agnostic specification. If your language of choice can handle JSON, it can be
+used with JSONQ-compliant data sources. Writing JSON queries is not going to save you any time,
+however, so language bindings are expected to be used to fully leverage JSONQ.</p>
+
+<p>Some examples of possible bindings are provided below. This is the JSONQ query being demonstrated:</p>
+
+<pre><code>{
+    &quot;from&quot;: &quot;Products&quot;,
+    &quot;as&quot;: &quot;p&quot;,
+    &quot;group&quot;: {
+        &quot;by&quot;: &quot;p.category&quot;,
+        &quot;into&quot;: &quot;cat&quot;
+    },
+    &quot;select&quot;: {
+        &quot;category&quot;: &quot;cat.key&quot;,
+        &quot;products&quot;: &quot;cat&quot;
+    }
+}
+</code></pre>
+
+<h2 id="toc_2">Javascript</h2>
+
+<pre><code>var products = jsonq.getStore(&quot;Products&quot;);
+products
+    .as(&quot;p&quot;)
+    .group(&quot;p.category&quot;, &quot;cat&quot;)
+    .select(
+        { &quot;category&quot;: &quot;cat.key&quot;,
+          &quot;products&quot;: &quot;cat&quot; },
+        function(results) {
+            for (var i=0; i&lt;results.length; i++) {
+                var r = results[i];
+                console.log(
+                    &quot;There are &quot; + r.products.length +
+                    &quot; products in category &#39;&quot; + r.category+&quot;&#39;&quot; );
+            }
+        }
+
+    )
+</code></pre>
 
   </div>
 </div>

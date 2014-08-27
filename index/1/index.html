@@ -12,8 +12,8 @@
     <![endif]-->
 
     <!-- Le styles -->
-<link href='/assets/stylesheets/stylesheet-2fc885340f7ca2c1186cda87a5721af4.css' type='text/css' rel='stylesheet' media='all'>
-<link href='/assets/stylesheets/google_prettify/desert-9f5a5bacd53cac3acdeeb30b9b8a2d5e.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/assets/stylesheets/stylesheet-5b97a5ac160d4e8098412fd1afefaf9d.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/assets/stylesheets/google_prettify/desert-00eb6f3e954c4591e80db7afede04b30.css' type='text/css' rel='stylesheet' media='all'>
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -75,11 +75,34 @@
       <div class="_root">
         <h3 class="title"><a href="/">JSONQ</a> <span class="date"></span></h3>
 
-        <div class="summary">
+        <div class="summary ellipsis">
 <h1 id="toc_0">What is JSONQ?</h1>
 
-<p>JSONQ is a JSON-based specification for data  access and storage. All operations are, fundamentally,
-able to be represented as <a href="http://www.json.org" title="JSON">JSON</a> documents.</p>
+<p>JSONQ is a JSON-based specification for data access and storage. All operations are, fundamentally,
+able to be represented as <a href="http://www.json.org" title="JSON">JSON</a> documents. By using JSON messages to represent data operations,
+JSONQ provides a flexible base layer for building asynchronous language bindings.</p>
+
+<h1 id="toc_1">Language Bindings</h1>
+
+<p>JSONQ is a language-agnostic specification. If your language of choice can handle JSON, it can be
+used with JSONQ-compliant data sources. Writing JSON queries is not going to save you any time,
+however, so language bindings are expected to be used to fully leverage JSONQ.</p>
+
+<p>Some examples of possible bindings are provided below. This is the JSONQ query being demonstrated:</p>
+
+<pre><code>{
+    "from": "Products",
+    "as": "p",
+    "group": {
+        "by": "p.category",
+        "into": "cat"
+    },
+    "select": {
+        "category": "cat.key",
+        "products": "cat"
+    }
+}
+</code></pre>
 </div>
 
         <div class="more">

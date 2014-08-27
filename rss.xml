@@ -25,8 +25,52 @@
       <link>http://www.jsonq.org/</link>
       <description>&lt;h1 id="toc_0"&gt;What is JSONQ?&lt;/h1&gt;
 
-&lt;p&gt;JSONQ is a JSON-based specification for data  access and storage. All operations are, fundamentally,
-able to be represented as &lt;a href="http://www.json.org" title="JSON"&gt;JSON&lt;/a&gt; documents.&lt;/p&gt;
+&lt;p&gt;JSONQ is a JSON-based specification for data access and storage. All operations are, fundamentally,
+able to be represented as &lt;a href="http://www.json.org" title="JSON"&gt;JSON&lt;/a&gt; documents. By using JSON messages to represent data operations,
+JSONQ provides a flexible base layer for building asynchronous language bindings.&lt;/p&gt;
+
+&lt;h1 id="toc_1"&gt;Language Bindings&lt;/h1&gt;
+
+&lt;p&gt;JSONQ is a language-agnostic specification. If your language of choice can handle JSON, it can be
+used with JSONQ-compliant data sources. Writing JSON queries is not going to save you any time,
+however, so language bindings are expected to be used to fully leverage JSONQ.&lt;/p&gt;
+
+&lt;p&gt;Some examples of possible bindings are provided below. This is the JSONQ query being demonstrated:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;from&amp;quot;: &amp;quot;Products&amp;quot;,
+    &amp;quot;as&amp;quot;: &amp;quot;p&amp;quot;,
+    &amp;quot;group&amp;quot;: {
+        &amp;quot;by&amp;quot;: &amp;quot;p.category&amp;quot;,
+        &amp;quot;into&amp;quot;: &amp;quot;cat&amp;quot;
+    },
+    &amp;quot;select&amp;quot;: {
+        &amp;quot;category&amp;quot;: &amp;quot;cat.key&amp;quot;,
+        &amp;quot;products&amp;quot;: &amp;quot;cat&amp;quot;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="toc_2"&gt;Javascript&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;var products = jsonq.getStore(&amp;quot;Products&amp;quot;);
+products
+    .as(&amp;quot;p&amp;quot;)
+    .group(&amp;quot;p.category&amp;quot;, &amp;quot;cat&amp;quot;)
+    .select(
+        { &amp;quot;category&amp;quot;: &amp;quot;cat.key&amp;quot;,
+          &amp;quot;products&amp;quot;: &amp;quot;cat&amp;quot; },
+        function(results) {
+            for (var i=0; i&amp;lt;results.length; i++) {
+                var r = results[i];
+                console.log(
+                    &amp;quot;There are &amp;quot; + r.products.length +
+                    &amp;quot; products in category &amp;#39;&amp;quot; + r.category+&amp;quot;&amp;#39;&amp;quot; );
+            }
+        }
+
+    )
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     <item>

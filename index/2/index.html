@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>JSONQ</title>
+    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="">
 
@@ -47,17 +47,57 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <div class="page-header">
-  <!--<h1>JSONQ </h1>-->
+        <div class="row-fluid">
+  <div class="span12">
+      <div class="_root">
+        <h3 class="title"><a href="/about">about</a> <span class="date"></span></h3>
+
+        <div class="summary">
+<h1 id="toc_0">about JSONQ</h1>
 </div>
 
-<div class="row-fluid">
-  <div class="span12">
-    <h1 id="toc_0">What is JSONQ?</h1>
+        <div class="more">
+          <a href="/about" class="btn btn-small">read more..</a>
+        </div>
+      </div>
+      <div class="_root">
+        <h3 class="title"><a href="/examples">examples</a> <span class="date"></span></h3>
 
-<p>JSONQ is a JSON-based specification for data  access and storage. All operations are, fundamentally,
-able to be represented as <a href="http://www.json.org" title="JSON">JSON</a> documents.</p>
+        <div class="summary ellipsis">
+<h1 id="toc_0">JSONQ examples</h1>
 
+<p>The following example demonstrates a simple aggregation.</p>
+
+<h2 id="toc_1">Data</h2>
+
+<pre><code>[ 2, 2, 3, 5, 5 ]
+</code></pre>
+
+<h2 id="toc_2">Request</h2>
+
+<pre><code>{
+    "distinct": {
+        "from": "args[0]",
+        "as": "n",
+        "select": "count(n)"
+    }
+}
+</code></pre>
+
+<h1 id="toc_3">Result</h1>
+</div>
+
+        <div class="more">
+          <a href="/examples" class="btn btn-small">read more..</a>
+        </div>
+      </div>
+    
+    <div class="pagination">
+      <ul>
+          <li><a href="/index/1">1</a></li>
+          <li class="active"><a href="/index/2">2</a></li>
+      </ul>
+    </div>
   </div>
 </div>
 

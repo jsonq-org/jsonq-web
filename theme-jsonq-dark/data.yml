@@ -1,0 +1,6 @@
+title : jsonq.org
+tagline: A JSON-based universal data access language
+
+navigation :
+  - examples
+  - about

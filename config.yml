@@ -9,4 +9,7 @@ widgets :
       linenums : true
 
 "theme-jsonq":
+    use: "ignore"
+
+"theme-jsonq-dark":
     use: "theme"

@@ -34,14 +34,12 @@ Some examples of possible bindings are provided below. This is the JSONQ query b
 	var products = jsonq.getStore("Products");
 	products
 		.as("p")
-		.group( "p.category", "cat" )
+		.group("p.category", "cat")
 		.select(
-			{
-				"category": "cat.key",
-				"products": "cat"
-			},
+			{ "category": "cat.key",
+			  "products": "cat" },
 			function(results) {
-				for (var i = 0; i<results.length; i++) {
+				for (var i=0; i<results.length; i++) {
 					var r = results[i];
 					console.log(
 						"There are " + r.products.length +

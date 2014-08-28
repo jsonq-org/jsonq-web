@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+<link href='/assets/stylesheets/stylesheet-5b97a5ac160d4e8098412fd1afefaf9d.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/assets/stylesheets/google_prettify/desert-00eb6f3e954c4591e80db7afede04b30.css' type='text/css' rel='stylesheet' media='all'>
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <!--<a id="forkme_banner" href="https://github.com/jsonq-org/jsonq">View on GitHub</a>-->
+
+          <a id="project_title" href="/">jsonq.org</a>
+					<h2 id="project_tagline">A JSON-based universal data access language</h2>
+
+						<!--TODO: nav-->
+						<section id="nav">
+							<a class="nav_link" href="/examples">Examples</a>
+						</section>
+            <!--<section id="downloads">-->
+              <!--<a class="zip_download_link" href="https://github.com/jsonq-org/jsonq/zipball/master">Download this project as a .zip file</a>-->
+              <!--<a class="tar_download_link" href="https://github.com/jsonq-org/jsonq/tarball/master">Download this project as a tar.gz file</a>-->
+            <!--</section>-->
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <div class="row-fluid">
+  <div class="span12">
+      <div class="examples">
+        <h3 class="title"><a href="/examples/restriction/5">Where - indexed</a> <span class="date"></span></h3>
+
+        <div class="summary ellipsis">
+<h1 id="toc_0">Arguments</h1>
+
+<pre><code>[
+  [
+    "zero", 
+    "one", 
+    "two", 
+    "three", 
+    "four", 
+    "five", 
+    "six", 
+    "seven", 
+    "eight", 
+    "nine"
+  ]
+]
+</code></pre>
+
+<h1 id="toc_1">Query</h1>
+
+<pre><code>{
+  "where": "digit.length() &lt; $index", 
+  "as": "digit", 
+  "from": "args[0]", 
+  "select": "digit"
+}
+</code></pre>
+</div>
+
+        <div class="more">
+          <a href="/examples/restriction/5" class="btn btn-small">read more..</a>
+        </div>
+      </div>
+      <div class="examples">
+        <h3 class="title"><a href="/examples/restriction/1">Where - simple 1</a> <span class="date"></span></h3>
+
+        <div class="summary ellipsis">
+<h1 id="toc_0">Arguments</h1>
+
+<pre><code>[
+  [
+    5, 
+    4, 
+    1, 
+    3, 
+    9, 
+    8, 
+    6, 
+    7, 
+    2, 
+    0
+  ]
+]
+</code></pre>
+
+<h1 id="toc_1">Query</h1>
+
+<pre><code>{
+  "where": "n &lt; 5", 
+  "as": "n", 
+  "from": "args[0]", 
+  "select": "n"
+}
+</code></pre>
+</div>
+
+        <div class="more">
+          <a href="/examples/restriction/1" class="btn btn-small">read more..</a>
+        </div>
+      </div>
+      <div class="examples">
+        <h3 class="title"><a href="/examples/restriction/2">Where - simple 2</a> <span class="date"></span></h3>
+
+        <div class="summary">
+<h1 id="toc_0">Query</h1>
+
+<pre><code>{
+  "where": "p.unitsInStock == 0", 
+  "as": "p", 
+  "from": "Products", 
+  "select": "p.productName"
+}
+</code></pre>
+
+<h1 id="toc_1">Results</h1>
+
+<pre><code>{}
+</code></pre>
+</div>
+
+        <div class="more">
+          <a href="/examples/restriction/2" class="btn btn-small">read more..</a>
+        </div>
+      </div>
+      <div class="examples">
+        <h3 class="title"><a href="/examples/restriction/4">Where - simple 4</a> <span class="date"></span></h3>
+
+        <div class="summary">
+<h1 id="toc_0">Query</h1>
+
+<pre><code>{
+  "where": "c.region == \"WA\"", 
+  "as": "c", 
+  "from": "Customers", 
+  "select": "c"
+}
+</code></pre>
+
+<h1 id="toc_1">Results</h1>
+
+<pre><code>{}
+</code></pre>
+</div>
+
+        <div class="more">
+          <a href="/examples/restriction/4" class="btn btn-small">read more..</a>
+        </div>
+      </div>
+      <div class="examples">
+        <h3 class="title"><a href="/examples">jsonq examples</a> <span class="date"></span></h3>
+
+        <div class="summary ellipsis">
+<h1 id="toc_0">aggregation</h1>
+
+<p><a href="aggregation/1">Aggregation operations - simple count</a></p>
+
+<p><a href="aggregation/2">Aggregation operations - conditional count</a></p>
+
+<p><a href="aggregation/3">Aggregation operations - nested count</a></p>
+
+<p><a href="aggregation/4">Aggregation operations - grouped count</a></p>
+
+<p><a href="aggregation/5">Aggregation operations - simple sum</a></p>
+
+<p><a href="aggregation/6">Aggregation operations - projected sum</a></p>
+
+<p><a href="aggregation/7">Aggregation operations - grouped count</a></p>
+
+<p><a href="aggregation/8">Aggregation operations - simple min</a></p>
+
+<p><a href="aggregation/9">Aggregation operations - projected min</a></p>
+
+<p><a href="aggregation/10">Aggregation operations - grouped min</a></p>
+</div>
+
+        <div class="more">
+          <a href="/examples" class="btn btn-small">read more..</a>
+        </div>
+      </div>
+    
+    <div class="pagination">
+      <ul>
+          <li><a href="/examples/index/1">1</a></li>
+          <li><a href="/examples/index/2">2</a></li>
+          <li><a href="/examples/index/3">3</a></li>
+          <li><a href="/examples/index/4">4</a></li>
+          <li><a href="/examples/index/5">5</a></li>
+          <li><a href="/examples/index/6">6</a></li>
+          <li><a href="/examples/index/7">7</a></li>
+          <li><a href="/examples/index/8">8</a></li>
+          <li><a href="/examples/index/9">9</a></li>
+          <li><a href="/examples/index/10">10</a></li>
+          <li><a href="/examples/index/11">11</a></li>
+          <li><a href="/examples/index/12">12</a></li>
+          <li><a href="/examples/index/13">13</a></li>
+          <li><a href="/examples/index/14">14</a></li>
+          <li><a href="/examples/index/15">15</a></li>
+          <li class="active"><a href="/examples/index/16">16</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+				<p class="copyright">jsonq.org maintained by <a href="https://github.com/jsonq-org">jsonq-org</a></p>
+      </footer>
+    </div>
+
+    </div> <!-- /container -->
+
+    <!-- Google Prettify -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+</script>
+<!-- end Google Prettify -->
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-54191340-1']);
+  _gaq.push(['_trackPageview']);
+  
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+  </body>
+</html>

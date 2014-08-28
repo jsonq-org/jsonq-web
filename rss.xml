@@ -4,7 +4,7 @@
     <title>jsonq.org</title>
     <description>jsonq.org</description>
     <link>http://www.jsonq.org</link>
-    <pubDate>2014-08-27</pubDate>
+    <pubDate>2014-08-28</pubDate>
     <item>
       <title>Archive</title>
       <link>http://www.jsonq.org/archive</link>
@@ -96,9 +96,6 @@ products
   
     &lt;li&gt;&lt;a href="/about"&gt;about&lt;/a&gt;&lt;/li&gt;
   
-  
-    &lt;li&gt;&lt;a href="/examples"&gt;examples&lt;/a&gt;&lt;/li&gt;
-  
 &lt;/ul&gt;
 </description>
     </item>
@@ -116,37 +113,6 @@ products
       <title>about</title>
       <link>http://www.jsonq.org/about</link>
       <description>&lt;h1 id="toc_0"&gt;about JSONQ&lt;/h1&gt;
-</description>
-    </item>
-    <item>
-      <title>examples</title>
-      <link>http://www.jsonq.org/examples</link>
-      <description>&lt;h1 id="toc_0"&gt;JSONQ examples&lt;/h1&gt;
-
-&lt;p&gt;The following example demonstrates a simple aggregation.&lt;/p&gt;
-
-&lt;h2 id="toc_1"&gt;Data&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;[ 2, 2, 3, 5, 5 ]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id="toc_2"&gt;Request&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-    &amp;quot;distinct&amp;quot;: {
-        &amp;quot;from&amp;quot;: &amp;quot;args[0]&amp;quot;,
-        &amp;quot;as&amp;quot;: &amp;quot;n&amp;quot;,
-        &amp;quot;select&amp;quot;: &amp;quot;count(n)&amp;quot;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id="toc_3"&gt;Result&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-    &amp;quot;results&amp;quot;: [ 2, 3, 5 ]
-}
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
   </channel>

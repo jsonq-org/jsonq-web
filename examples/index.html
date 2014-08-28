@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>examples</title>
+    <title>jsonq examples</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="">
 
@@ -47,41 +47,183 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <div class="page-header">
-  <!--<h1>examples </h1>-->
-</div>
+        <h1 id="toc_0">aggregation</h1>
 
-<div class="row-fluid">
-  <div class="span12">
-    <h1 id="toc_0">JSONQ examples</h1>
+<p><a href="aggregation/1">Aggregation operations - simple count</a></p>
 
-<p>The following example demonstrates a simple aggregation.</p>
+<p><a href="aggregation/2">Aggregation operations - conditional count</a></p>
 
-<h2 id="toc_1">Data</h2>
+<p><a href="aggregation/3">Aggregation operations - nested count</a></p>
 
-<pre><code>[ 2, 2, 3, 5, 5 ]
-</code></pre>
+<p><a href="aggregation/4">Aggregation operations - grouped count</a></p>
 
-<h2 id="toc_2">Request</h2>
+<p><a href="aggregation/5">Aggregation operations - simple sum</a></p>
 
-<pre><code>{
-    &quot;distinct&quot;: {
-        &quot;from&quot;: &quot;args[0]&quot;,
-        &quot;as&quot;: &quot;n&quot;,
-        &quot;select&quot;: &quot;count(n)&quot;
-    }
-}
-</code></pre>
+<p><a href="aggregation/6">Aggregation operations - projected sum</a></p>
 
-<h1 id="toc_3">Result</h1>
+<p><a href="aggregation/7">Aggregation operations - grouped count</a></p>
 
-<pre><code>{
-    &quot;results&quot;: [ 2, 3, 5 ]
-}
-</code></pre>
+<p><a href="aggregation/8">Aggregation operations - simple min</a></p>
 
-  </div>
-</div>
+<p><a href="aggregation/9">Aggregation operations - projected min</a></p>
+
+<p><a href="aggregation/10">Aggregation operations - grouped min</a></p>
+
+<p><a href="aggregation/11">Aggregation operations - min subquery</a></p>
+
+<p><a href="aggregation/12">Aggregation operations - simple max</a></p>
+
+<p><a href="aggregation/13">Aggregation operations - projected max</a></p>
+
+<p><a href="aggregation/14">Aggregation operations - grouped max</a></p>
+
+<p><a href="aggregation/15">Aggregation operations - max subquery</a></p>
+
+<p><a href="aggregation/16">Aggregation operations - simple average</a></p>
+
+<p><a href="aggregation/17">Aggregation operations - projected average</a></p>
+
+<p><a href="aggregation/18">Aggregation operations - grouped average</a></p>
+
+<h1 id="toc_1">restriction</h1>
+
+<p><a href="restriction/1">Where - simple 1</a></p>
+
+<p><a href="restriction/2">Where - simple 2</a></p>
+
+<p><a href="restriction/3">Where - compound query</a></p>
+
+<p><a href="restriction/3a">Where - compound query - alternate query syntax</a></p>
+
+<p><a href="restriction/3b">Where - compound query - full object notation</a></p>
+
+<p><a href="restriction/4">Where - simple 4</a></p>
+
+<p><a href="restriction/5">Where - indexed</a></p>
+
+<h1 id="toc_2">order</h1>
+
+<p><a href="order/1">Order - Simple 1</a></p>
+
+<p><a href="order/2">Order - Simple 2</a></p>
+
+<p><a href="order/3">Order - Simple 3</a></p>
+
+<p><a href="order/4">Order - Comparer</a></p>
+
+<p><a href="order/5">Order - Descending Simple 1</a></p>
+
+<p><a href="order/6">Order - Descending Simple 2</a></p>
+
+<p><a href="order/7">Order - Descending Comparer</a></p>
+
+<p><a href="order/8">Order - Multiple with Comparator</a></p>
+
+<p><a href="order/9">Order - Multiple</a></p>
+
+<p><a href="order/10">Order - Multiple Descending Simple</a></p>
+
+<p><a href="order/11">Order - Multiple Descending Comparator</a></p>
+
+<p><a href="order/12">Order - Multiple Descending Comparator</a></p>
+
+<h1 id="toc_3">projection</h1>
+
+<p><a href="projection/1">Projection - simple 1</a></p>
+
+<p><a href="projection/2">Projection - simple 2</a></p>
+
+<p><a href="projection/3">Projection - transformation</a></p>
+
+<p><a href="projection/4">Projection - anonymous objects 1</a></p>
+
+<p><a href="projection/5">Projection - anonymous objects 2</a></p>
+
+<p><a href="projection/6">Projection - anonymous objects 3</a></p>
+
+<p><a href="projection/7">Projection - indexed</a></p>
+
+<p><a href="projection/8">Projection - filtered</a></p>
+
+<p><a href="projection/9">Projection - compound selection 1</a></p>
+
+<p><a href="projection/10">Projection - compound selection 2</a></p>
+
+<p><a href="projection/11">Projection - compound selection 3</a></p>
+
+<p><a href="projection/12">Projection - from assignment</a></p>
+
+<p><a href="projection/13">Projection - multiple from</a></p>
+
+<p><a href="projection/14">Projection - indexed</a></p>
+
+<h1 id="toc_4">join</h1>
+
+<p><a href="join/1">Cross join</a></p>
+
+<p><a href="join/2">Group join</a></p>
+
+<p><a href="join/3">Cross join with Group join</a></p>
+
+<p><a href="join/4">Left-outer join</a></p>
+
+<h1 id="toc_5">element</h1>
+
+<p><a href="element/1">Element operators - first</a></p>
+
+<p><a href="element/2">Element operators - first conditional</a></p>
+
+<h1 id="toc_6">grouping</h1>
+
+<p><a href="grouping/1">Grouping - simple 1</a></p>
+
+<p><a href="grouping/2">Grouping - simple 2</a></p>
+
+<p><a href="grouping/3">Grouping - simple 3</a></p>
+
+<p><a href="grouping/4">Grouping - nested</a></p>
+
+<p><a href="grouping/5">Grouping - anagram comparator</a></p>
+
+<p><a href="grouping/6">Grouping - anagram comparator with mapping</a></p>
+
+<h1 id="toc_7">set</h1>
+
+<p><a href="set/1">Set operations - distinct 1</a></p>
+
+<p><a href="set/2">Set operations - distinct 2</a></p>
+
+<p><a href="set/3">Set operations - union 1</a></p>
+
+<p><a href="set/4">Set operations - union 2</a></p>
+
+<p><a href="set/5">Set operations - intersect 1</a></p>
+
+<p><a href="set/6">Set operations - intersect 2</a></p>
+
+<p><a href="set/7">Set operations - except 1</a></p>
+
+<p><a href="set/8">Set operations - except 2</a></p>
+
+<h1 id="toc_8">quantifiers</h1>
+
+<p><a href="quantifiers/1">Quantifiers - Any</a></p>
+
+<p><a href="quantifiers/2">Quantifiers - Any grouped</a></p>
+
+<p><a href="quantifiers/3">Quantifiers - All</a></p>
+
+<p><a href="quantifiers/4">Quantifiers - All grouped</a></p>
+
+<h1 id="toc_9">partition</h1>
+
+<p><a href="partition/1">Partition - simple take</a></p>
+
+<p><a href="partition/2">Partition - nested take</a></p>
+
+<p><a href="partition/3">Partition - simple skip</a></p>
+
+<p><a href="partition/4">Partition - nested skip</a></p>
 
       </section>
     </div>

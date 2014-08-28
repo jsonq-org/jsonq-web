@@ -1,0 +1,628 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>jsonq.org</title>
+    <description>jsonq.org</description>
+    <link>http://www.jsonq.org</link>
+    <pubDate>2014-08-28</pubDate>
+    <item>
+      <title>Aggregation operations - conditional count</title>
+      <link>http://www.jsonq.org/examples/aggregation/2</link>
+      <description>&lt;h1 id="toc_0"&gt;Arguments&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;[
+  [
+    5, 
+    4, 
+    1, 
+    3, 
+    9, 
+    8, 
+    6, 
+    7, 
+    2, 
+    0
+  ]
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;Query&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;where&amp;quot;: &amp;quot;n % 2 == 1&amp;quot;, 
+  &amp;quot;as&amp;quot;: &amp;quot;n&amp;quot;, 
+  &amp;quot;from&amp;quot;: &amp;quot;args[0]&amp;quot;, 
+  &amp;quot;select&amp;quot;: &amp;quot;count(n)&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>Aggregation operations - grouped average</title>
+      <link>http://www.jsonq.org/examples/aggregation/18</link>
+      <description>&lt;h1 id="toc_0"&gt;Query&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;group&amp;quot;: {
+    &amp;quot;into&amp;quot;: &amp;quot;g&amp;quot;, 
+    &amp;quot;by&amp;quot;: &amp;quot;p.category&amp;quot;
+  }, 
+  &amp;quot;as&amp;quot;: &amp;quot;p&amp;quot;, 
+  &amp;quot;from&amp;quot;: &amp;quot;Products&amp;quot;, 
+  &amp;quot;select&amp;quot;: {
+    &amp;quot;category&amp;quot;: &amp;quot;g.key&amp;quot;, 
+    &amp;quot;averagePrice&amp;quot;: &amp;quot;g.average(p.unitPrice)&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;Results&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>Aggregation operations - grouped count</title>
+      <link>http://www.jsonq.org/examples/aggregation/7</link>
+      <description>&lt;h1 id="toc_0"&gt;Query&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;group&amp;quot;: {
+    &amp;quot;into&amp;quot;: &amp;quot;g&amp;quot;, 
+    &amp;quot;by&amp;quot;: &amp;quot;p.category&amp;quot;
+  }, 
+  &amp;quot;as&amp;quot;: &amp;quot;p&amp;quot;, 
+  &amp;quot;from&amp;quot;: &amp;quot;Products&amp;quot;, 
+  &amp;quot;select&amp;quot;: {
+    &amp;quot;category&amp;quot;: &amp;quot;g.key&amp;quot;, 
+    &amp;quot;totalUnitsInStock&amp;quot;: &amp;quot;g.sum(p.unitsInStock)&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;Results&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>Aggregation operations - grouped count</title>
+      <link>http://www.jsonq.org/examples/aggregation/4</link>
+      <description>&lt;h1 id="toc_0"&gt;Query&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;group&amp;quot;: {
+    &amp;quot;into&amp;quot;: &amp;quot;g&amp;quot;, 
+    &amp;quot;by&amp;quot;: &amp;quot;p.category&amp;quot;
+  }, 
+  &amp;quot;as&amp;quot;: &amp;quot;p&amp;quot;, 
+  &amp;quot;from&amp;quot;: &amp;quot;Products&amp;quot;, 
+  &amp;quot;select&amp;quot;: {
+    &amp;quot;category&amp;quot;: &amp;quot;g.key&amp;quot;, 
+    &amp;quot;productCount&amp;quot;: &amp;quot;g.count()&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;Results&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>Aggregation operations - grouped max</title>
+      <link>http://www.jsonq.org/examples/aggregation/14</link>
+      <description>&lt;h1 id="toc_0"&gt;Query&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;group&amp;quot;: {
+    &amp;quot;into&amp;quot;: &amp;quot;g&amp;quot;, 
+    &amp;quot;by&amp;quot;: &amp;quot;p.category&amp;quot;
+  }, 
+  &amp;quot;as&amp;quot;: &amp;quot;p&amp;quot;, 
+  &amp;quot;from&amp;quot;: &amp;quot;Products&amp;quot;, 
+  &amp;quot;select&amp;quot;: {
+    &amp;quot;category&amp;quot;: &amp;quot;g.key&amp;quot;, 
+    &amp;quot;mostExpensivePrice&amp;quot;: &amp;quot;g.max(p.unitPrice)&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;Results&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>Aggregation operations - grouped min</title>
+      <link>http://www.jsonq.org/examples/aggregation/10</link>
+      <description>&lt;h1 id="toc_0"&gt;Query&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;group&amp;quot;: {
+    &amp;quot;into&amp;quot;: &amp;quot;g&amp;quot;, 
+    &amp;quot;by&amp;quot;: &amp;quot;p.category&amp;quot;
+  }, 
+  &amp;quot;as&amp;quot;: &amp;quot;p&amp;quot;, 
+  &amp;quot;from&amp;quot;: &amp;quot;Products&amp;quot;, 
+  &amp;quot;select&amp;quot;: {
+    &amp;quot;category&amp;quot;: &amp;quot;g.key&amp;quot;, 
+    &amp;quot;cheapestPrice&amp;quot;: &amp;quot;g.min(p.unitPrice)&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;Results&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>Aggregation operations - max subquery</title>
+      <link>http://www.jsonq.org/examples/aggregation/15</link>
+      <description>&lt;h1 id="toc_0"&gt;Query&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;group&amp;quot;: {
+    &amp;quot;into&amp;quot;: &amp;quot;g&amp;quot;, 
+    &amp;quot;by&amp;quot;: &amp;quot;p.category&amp;quot;
+  }, 
+  &amp;quot;as&amp;quot;: &amp;quot;p&amp;quot;, 
+  &amp;quot;from&amp;quot;: &amp;quot;Products&amp;quot;, 
+  &amp;quot;select&amp;quot;: {
+    &amp;quot;category&amp;quot;: &amp;quot;g.key&amp;quot;, 
+    &amp;quot;mostExpensiveProducts&amp;quot;: {
+      &amp;quot;where&amp;quot;: &amp;quot;p.unitPrice == g.max(p.unitPrice)&amp;quot;, 
+      &amp;quot;as&amp;quot;: &amp;quot;p&amp;quot;, 
+      &amp;quot;from&amp;quot;: &amp;quot;g&amp;quot;, 
+      &amp;quot;select&amp;quot;: &amp;quot;p&amp;quot;
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;Results&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>Aggregation operations - min subquery</title>
+      <link>http://www.jsonq.org/examples/aggregation/11</link>
+      <description>&lt;h1 id="toc_0"&gt;Query&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;group&amp;quot;: {
+    &amp;quot;into&amp;quot;: &amp;quot;g&amp;quot;, 
+    &amp;quot;by&amp;quot;: &amp;quot;p.category&amp;quot;
+  }, 
+  &amp;quot;as&amp;quot;: &amp;quot;p&amp;quot;, 
+  &amp;quot;from&amp;quot;: &amp;quot;Products&amp;quot;, 
+  &amp;quot;select&amp;quot;: {
+    &amp;quot;category&amp;quot;: &amp;quot;g.key&amp;quot;, 
+    &amp;quot;cheapestProducts&amp;quot;: {
+      &amp;quot;where&amp;quot;: &amp;quot;p.unitPrice == g.min(p.unitPrice)&amp;quot;, 
+      &amp;quot;as&amp;quot;: &amp;quot;p&amp;quot;, 
+      &amp;quot;from&amp;quot;: &amp;quot;g&amp;quot;, 
+      &amp;quot;select&amp;quot;: &amp;quot;p&amp;quot;
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;Results&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>Aggregation operations - nested count</title>
+      <link>http://www.jsonq.org/examples/aggregation/3</link>
+      <description>&lt;h1 id="toc_0"&gt;Query&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;as&amp;quot;: &amp;quot;c&amp;quot;, 
+  &amp;quot;from&amp;quot;: &amp;quot;Customers&amp;quot;, 
+  &amp;quot;select&amp;quot;: {
+    &amp;quot;customerId&amp;quot;: &amp;quot;c.customerId&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: &amp;quot;count(c.orders)&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;Results&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>Aggregation operations - projected average</title>
+      <link>http://www.jsonq.org/examples/aggregation/17</link>
+      <description>&lt;h1 id="toc_0"&gt;Arguments&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;[
+  [
+    &amp;quot;cherry&amp;quot;, 
+    &amp;quot;apple&amp;quot;, 
+    &amp;quot;blueberry&amp;quot;
+  ]
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;Query&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;as&amp;quot;: &amp;quot;w&amp;quot;, 
+  &amp;quot;from&amp;quot;: &amp;quot;args[0]&amp;quot;, 
+  &amp;quot;select&amp;quot;: &amp;quot;average(w.length())&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>Aggregation operations - projected max</title>
+      <link>http://www.jsonq.org/examples/aggregation/13</link>
+      <description>&lt;h1 id="toc_0"&gt;Arguments&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;[
+  [
+    &amp;quot;cherry&amp;quot;, 
+    &amp;quot;apple&amp;quot;, 
+    &amp;quot;blueberry&amp;quot;
+  ]
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;Query&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;as&amp;quot;: &amp;quot;w&amp;quot;, 
+  &amp;quot;from&amp;quot;: &amp;quot;args[0]&amp;quot;, 
+  &amp;quot;select&amp;quot;: &amp;quot;max(w.length())&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>Aggregation operations - projected min</title>
+      <link>http://www.jsonq.org/examples/aggregation/9</link>
+      <description>&lt;h1 id="toc_0"&gt;Arguments&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;[
+  [
+    &amp;quot;cherry&amp;quot;, 
+    &amp;quot;apple&amp;quot;, 
+    &amp;quot;blueberry&amp;quot;
+  ]
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;Query&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;as&amp;quot;: &amp;quot;w&amp;quot;, 
+  &amp;quot;from&amp;quot;: &amp;quot;args[0]&amp;quot;, 
+  &amp;quot;select&amp;quot;: &amp;quot;min(w.length())&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>Aggregation operations - projected sum</title>
+      <link>http://www.jsonq.org/examples/aggregation/6</link>
+      <description>&lt;h1 id="toc_0"&gt;Arguments&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;[
+  [
+    &amp;quot;cherry&amp;quot;, 
+    &amp;quot;apple&amp;quot;, 
+    &amp;quot;blueberry&amp;quot;
+  ]
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;Query&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;as&amp;quot;: &amp;quot;w&amp;quot;, 
+  &amp;quot;from&amp;quot;: &amp;quot;args[0]&amp;quot;, 
+  &amp;quot;select&amp;quot;: &amp;quot;sum(w.length())&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>Aggregation operations - simple average</title>
+      <link>http://www.jsonq.org/examples/aggregation/16</link>
+      <description>&lt;h1 id="toc_0"&gt;Arguments&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;[
+  [
+    5, 
+    4, 
+    1, 
+    3, 
+    9, 
+    8, 
+    6, 
+    7, 
+    2, 
+    0
+  ]
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;Query&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;as&amp;quot;: &amp;quot;n&amp;quot;, 
+  &amp;quot;from&amp;quot;: &amp;quot;args[0]&amp;quot;, 
+  &amp;quot;select&amp;quot;: &amp;quot;average(n)&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>Aggregation operations - simple count</title>
+      <link>http://www.jsonq.org/examples/aggregation/1</link>
+      <description>&lt;h1 id="toc_0"&gt;Arguments&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;[
+  [
+    2, 
+    2, 
+    3, 
+    5, 
+    5
+  ]
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;Query&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;distinct&amp;quot;: {
+    &amp;quot;as&amp;quot;: &amp;quot;n&amp;quot;, 
+    &amp;quot;from&amp;quot;: &amp;quot;args[0]&amp;quot;, 
+    &amp;quot;select&amp;quot;: &amp;quot;count(n)&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>Aggregation operations - simple max</title>
+      <link>http://www.jsonq.org/examples/aggregation/12</link>
+      <description>&lt;h1 id="toc_0"&gt;Arguments&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;[
+  [
+    5, 
+    4, 
+    1, 
+    3, 
+    9, 
+    8, 
+    6, 
+    7, 
+    2, 
+    0
+  ]
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;Query&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;as&amp;quot;: &amp;quot;n&amp;quot;, 
+  &amp;quot;from&amp;quot;: &amp;quot;args[0]&amp;quot;, 
+  &amp;quot;select&amp;quot;: &amp;quot;max(n)&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>Aggregation operations - simple min</title>
+      <link>http://www.jsonq.org/examples/aggregation/8</link>
+      <description>&lt;h1 id="toc_0"&gt;Arguments&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;[
+  [
+    5, 
+    4, 
+    1, 
+    3, 
+    9, 
+    8, 
+    6, 
+    7, 
+    2, 
+    0
+  ]
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;Query&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;as&amp;quot;: &amp;quot;n&amp;quot;, 
+  &amp;quot;from&amp;quot;: &amp;quot;args[0]&amp;quot;, 
+  &amp;quot;select&amp;quot;: &amp;quot;min(n)&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>Aggregation operations - simple sum</title>
+      <link>http://www.jsonq.org/examples/aggregation/5</link>
+      <description>&lt;h1 id="toc_0"&gt;Arguments&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;[
+  [
+    5, 
+    4, 
+    1, 
+    3, 
+    9, 
+    8, 
+    6, 
+    7, 
+    2, 
+    0
+  ]
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;Query&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;as&amp;quot;: &amp;quot;n&amp;quot;, 
+  &amp;quot;from&amp;quot;: &amp;quot;args[0]&amp;quot;, 
+  &amp;quot;select&amp;quot;: &amp;quot;sum(n)&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>Cross join</title>
+      <link>http://www.jsonq.org/examples/join/1</link>
+      <description>&lt;h1 id="toc_0"&gt;Arguments&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;[
+  [
+    &amp;quot;Beverages&amp;quot;, 
+    &amp;quot;Condiments&amp;quot;, 
+    &amp;quot;Vegetables&amp;quot;, 
+    &amp;quot;Dairy Products&amp;quot;, 
+    &amp;quot;Seafood&amp;quot;
+  ]
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;Query&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;join&amp;quot;: {
+    &amp;quot;on&amp;quot;: &amp;quot;Products&amp;quot;, 
+    &amp;quot;as&amp;quot;: &amp;quot;p&amp;quot;, 
+    &amp;quot;by&amp;quot;: &amp;quot;c == p.category&amp;quot;
+  }, 
+  &amp;quot;as&amp;quot;: &amp;quot;c&amp;quot;, 
+  &amp;quot;from&amp;quot;: &amp;quot;args[0]&amp;quot;, 
+  &amp;quot;select&amp;quot;: {
+    &amp;quot;category&amp;quot;: &amp;quot;c&amp;quot;, 
+    &amp;quot;productName&amp;quot;: &amp;quot;p.productName&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>Cross join with Group join</title>
+      <link>http://www.jsonq.org/examples/join/3</link>
+      <description>&lt;h1 id="toc_0"&gt;Arguments&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;[
+  [
+    &amp;quot;Beverages&amp;quot;, 
+    &amp;quot;Condiments&amp;quot;, 
+    &amp;quot;Vegetables&amp;quot;, 
+    &amp;quot;Dairy Products&amp;quot;, 
+    &amp;quot;Seafood&amp;quot;
+  ]
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;Query&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;join&amp;quot;: {
+    &amp;quot;into&amp;quot;: &amp;quot;ps&amp;quot;, 
+    &amp;quot;on&amp;quot;: &amp;quot;Products&amp;quot;, 
+    &amp;quot;as&amp;quot;: &amp;quot;p&amp;quot;, 
+    &amp;quot;by&amp;quot;: &amp;quot;c == p.category&amp;quot;
+  }, 
+  &amp;quot;as&amp;quot;: &amp;quot;c&amp;quot;, 
+  &amp;quot;from&amp;quot;: &amp;quot;args[0]&amp;quot;, 
+  &amp;quot;query&amp;quot;: {
+    &amp;quot;as&amp;quot;: &amp;quot;p&amp;quot;, 
+    &amp;quot;from&amp;quot;: &amp;quot;ps&amp;quot;, 
+    &amp;quot;select&amp;quot;: {
+      &amp;quot;category&amp;quot;: &amp;quot;c&amp;quot;, 
+      &amp;quot;productName&amp;quot;: &amp;quot;p.productName&amp;quot;
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+  </channel>
+</rss>

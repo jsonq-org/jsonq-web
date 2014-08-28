@@ -8,6 +8,9 @@ widgets :
       use : default
       linenums : true
 
+"bin":
+    use: "ignore"
+
 "theme-jsonq":
     use: "ignore"
 

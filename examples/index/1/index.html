@@ -117,36 +117,6 @@
         </div>
       </div>
       <div class="examples">
-        <h3 class="title"><a href="/examples/aggregation/7">Aggregation operations - grouped count</a> <span class="date"></span></h3>
-
-        <div class="summary">
-<h1 id="toc_0">Query</h1>
-
-<pre><code>{
-  "group": {
-    "into": "g", 
-    "by": "p.category"
-  }, 
-  "as": "p", 
-  "from": "Products", 
-  "select": {
-    "category": "g.key", 
-    "totalUnitsInStock": "g.sum(p.unitsInStock)"
-  }
-}
-</code></pre>
-
-<h1 id="toc_1">Results</h1>
-
-<pre><code>{}
-</code></pre>
-</div>
-
-        <div class="more">
-          <a href="/examples/aggregation/7" class="btn btn-small">read more..</a>
-        </div>
-      </div>
-      <div class="examples">
         <h3 class="title"><a href="/examples/aggregation/4">Aggregation operations - grouped count</a> <span class="date"></span></h3>
 
         <div class="summary">
@@ -174,6 +144,36 @@
 
         <div class="more">
           <a href="/examples/aggregation/4" class="btn btn-small">read more..</a>
+        </div>
+      </div>
+      <div class="examples">
+        <h3 class="title"><a href="/examples/aggregation/7">Aggregation operations - grouped count</a> <span class="date"></span></h3>
+
+        <div class="summary">
+<h1 id="toc_0">Query</h1>
+
+<pre><code>{
+  "group": {
+    "into": "g", 
+    "by": "p.category"
+  }, 
+  "as": "p", 
+  "from": "Products", 
+  "select": {
+    "category": "g.key", 
+    "totalUnitsInStock": "g.sum(p.unitsInStock)"
+  }
+}
+</code></pre>
+
+<h1 id="toc_1">Results</h1>
+
+<pre><code>{}
+</code></pre>
+</div>
+
+        <div class="more">
+          <a href="/examples/aggregation/7" class="btn btn-small">read more..</a>
         </div>
       </div>
       <div class="examples">
@@ -225,6 +225,7 @@
           <li><a href="/examples/index/14">14</a></li>
           <li><a href="/examples/index/15">15</a></li>
           <li><a href="/examples/index/16">16</a></li>
+          <li><a href="/examples/index/17">17</a></li>
       </ul>
     </div>
   </div>

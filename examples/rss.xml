@@ -69,31 +69,6 @@
     </item>
     <item>
       <title>Aggregation operations - grouped count</title>
-      <link>http://www.jsonq.org/examples/aggregation/7</link>
-      <description>&lt;h1 id="toc_0"&gt;Query&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;group&amp;quot;: {
-    &amp;quot;into&amp;quot;: &amp;quot;g&amp;quot;, 
-    &amp;quot;by&amp;quot;: &amp;quot;p.category&amp;quot;
-  }, 
-  &amp;quot;as&amp;quot;: &amp;quot;p&amp;quot;, 
-  &amp;quot;from&amp;quot;: &amp;quot;Products&amp;quot;, 
-  &amp;quot;select&amp;quot;: {
-    &amp;quot;category&amp;quot;: &amp;quot;g.key&amp;quot;, 
-    &amp;quot;totalUnitsInStock&amp;quot;: &amp;quot;g.sum(p.unitsInStock)&amp;quot;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id="toc_1"&gt;Results&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code&gt;{}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    <item>
-      <title>Aggregation operations - grouped count</title>
       <link>http://www.jsonq.org/examples/aggregation/4</link>
       <description>&lt;h1 id="toc_0"&gt;Query&lt;/h1&gt;
 
@@ -107,6 +82,31 @@
   &amp;quot;select&amp;quot;: {
     &amp;quot;category&amp;quot;: &amp;quot;g.key&amp;quot;, 
     &amp;quot;productCount&amp;quot;: &amp;quot;g.count()&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="toc_1"&gt;Results&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>Aggregation operations - grouped count</title>
+      <link>http://www.jsonq.org/examples/aggregation/7</link>
+      <description>&lt;h1 id="toc_0"&gt;Query&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;group&amp;quot;: {
+    &amp;quot;into&amp;quot;: &amp;quot;g&amp;quot;, 
+    &amp;quot;by&amp;quot;: &amp;quot;p.category&amp;quot;
+  }, 
+  &amp;quot;as&amp;quot;: &amp;quot;p&amp;quot;, 
+  &amp;quot;from&amp;quot;: &amp;quot;Products&amp;quot;, 
+  &amp;quot;select&amp;quot;: {
+    &amp;quot;category&amp;quot;: &amp;quot;g.key&amp;quot;, 
+    &amp;quot;totalUnitsInStock&amp;quot;: &amp;quot;g.sum(p.unitsInStock)&amp;quot;
   }
 }
 &lt;/code&gt;&lt;/pre&gt;

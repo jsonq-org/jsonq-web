@@ -61,12 +61,16 @@ index = open(os.path.join(dest, 'index.md'), 'w')
 index.write('{\n')
 index.write('\t"title": "jsonq examples",\n')
 index.write('\t"layout": "default"\n')
-index.write('}\n')
+index.write('}\n\n')
+
+index.write('Given the flexibility of JSONQ, it can be utilized with any data source. Some of the following \
+        examples contain their own data. Those that do not reference either the [Customer](customer) or \
+        [Product](product) example databases.\n')
 
 for root, dirs, files in os.walk(source):
 
     path_splits = os.path.split(root)
-    if 'schema' == path_splits[-1]:
+    if 'schema' == path_splits[-1] or len(files) == 0:
         continue
     index.write('# %s\n' % (path_splits[-1], ))
 

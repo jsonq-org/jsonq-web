@@ -2,6 +2,8 @@
 	"title": "jsonq examples",
 	"layout": "default"
 }
+
+Given the flexibility of JSONQ, it can be utilized with any data source. Some of the following         examples contain their own data. Those that do not reference either the [Customer](customer) or         [Product](product) example databases.
 # 
 # aggregation
 [Aggregation operations - simple count](aggregation/1)

@@ -38,7 +38,7 @@
 
 &lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code&gt;{}
+&lt;pre&gt;&lt;code&gt;5
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -63,7 +63,40 @@
 
 &lt;h1 id="toc_1"&gt;Results&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code&gt;{}
+&lt;pre&gt;&lt;code&gt;[
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Beverages&amp;quot;, 
+    &amp;quot;averagePrice&amp;quot;: 37.979166666666664
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Condiments&amp;quot;, 
+    &amp;quot;averagePrice&amp;quot;: 23.0625
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Produce&amp;quot;, 
+    &amp;quot;averagePrice&amp;quot;: 32.37
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Meat/Poultry&amp;quot;, 
+    &amp;quot;averagePrice&amp;quot;: 54.00666666666667
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Seafood&amp;quot;, 
+    &amp;quot;averagePrice&amp;quot;: 20.6825
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Dairy Products&amp;quot;, 
+    &amp;quot;averagePrice&amp;quot;: 28.73
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Confections&amp;quot;, 
+    &amp;quot;averagePrice&amp;quot;: 25.16
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Grains/Cereals&amp;quot;, 
+    &amp;quot;averagePrice&amp;quot;: 20.25
+  }
+]
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -88,7 +121,40 @@
 
 &lt;h1 id="toc_1"&gt;Results&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code&gt;{}
+&lt;pre&gt;&lt;code&gt;[
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Beverages&amp;quot;, 
+    &amp;quot;productCount&amp;quot;: 12
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Condiments&amp;quot;, 
+    &amp;quot;productCount&amp;quot;: 12
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Produce&amp;quot;, 
+    &amp;quot;productCount&amp;quot;: 5
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Meat/Poultry&amp;quot;, 
+    &amp;quot;productCount&amp;quot;: 6
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Seafood&amp;quot;, 
+    &amp;quot;productCount&amp;quot;: 12
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Dairy Products&amp;quot;, 
+    &amp;quot;productCount&amp;quot;: 10
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Confections&amp;quot;, 
+    &amp;quot;productCount&amp;quot;: 13
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Grains/Cereals&amp;quot;, 
+    &amp;quot;productCount&amp;quot;: 7
+  }
+]
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -113,7 +179,40 @@
 
 &lt;h1 id="toc_1"&gt;Results&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code&gt;{}
+&lt;pre&gt;&lt;code&gt;[
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Beverages&amp;quot;, 
+    &amp;quot;totalUnitsInStock&amp;quot;: 559
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Condiments&amp;quot;, 
+    &amp;quot;totalUnitsInStock&amp;quot;: 507
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Produce&amp;quot;, 
+    &amp;quot;totalUnitsInStock&amp;quot;: 100
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Meat/Poultry&amp;quot;, 
+    &amp;quot;totalUnitsInStock&amp;quot;: 165
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Seafood&amp;quot;, 
+    &amp;quot;totalUnitsInStock&amp;quot;: 701
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Dairy Product&amp;quot;, 
+    &amp;quot;totalUnitsInStock&amp;quot;: 393
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Confections&amp;quot;, 
+    &amp;quot;totalUnitsInStock&amp;quot;: 386
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Grains/Cereal&amp;quot;, 
+    &amp;quot;totalUnitsInStock&amp;quot;: 308
+  }
+]
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -138,7 +237,40 @@
 
 &lt;h1 id="toc_1"&gt;Results&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code&gt;{}
+&lt;pre&gt;&lt;code&gt;[
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Beverages&amp;quot;, 
+    &amp;quot;mostExpensivePrice&amp;quot;: 263.5
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Condiments&amp;quot;, 
+    &amp;quot;mostExpensivePrice&amp;quot;: 43.9
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Produce&amp;quot;, 
+    &amp;quot;mostExpensivePrice&amp;quot;: 53.0
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Meat/Poultry&amp;quot;, 
+    &amp;quot;mostExpensivePrice&amp;quot;: 123.79
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Seafood&amp;quot;, 
+    &amp;quot;mostExpensivePrice&amp;quot;: 62.5
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Dairy Products&amp;quot;, 
+    &amp;quot;mostExpensivePrice&amp;quot;: 55.0
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Confections&amp;quot;, 
+    &amp;quot;mostExpensivePrice&amp;quot;: 81.0
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Grains/Cereals&amp;quot;, 
+    &amp;quot;mostExpensivePrice&amp;quot;: 38.0
+  }
+]
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -163,7 +295,40 @@
 
 &lt;h1 id="toc_1"&gt;Results&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code&gt;{}
+&lt;pre&gt;&lt;code&gt;[
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Beverages&amp;quot;, 
+    &amp;quot;cheapestPrice&amp;quot;: 4.5
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Condiments&amp;quot;, 
+    &amp;quot;cheapestPrice&amp;quot;: 10.0
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Produce&amp;quot;, 
+    &amp;quot;cheapestPrice&amp;quot;: 10.0
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Meat/Poultry&amp;quot;, 
+    &amp;quot;cheapestPrice&amp;quot;: 7.45
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Seafood&amp;quot;, 
+    &amp;quot;cheapestPrice&amp;quot;: 6.0
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Dairy Products&amp;quot;, 
+    &amp;quot;cheapestPrice&amp;quot;: 2.5
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Confections&amp;quot;, 
+    &amp;quot;cheapestPrice&amp;quot;: 9.2
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Grains/Cereals&amp;quot;, 
+    &amp;quot;cheapestPrice&amp;quot;: 7.0
+  }
+]
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -193,7 +358,104 @@
 
 &lt;h1 id="toc_1"&gt;Results&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code&gt;{}
+&lt;pre&gt;&lt;code&gt;[
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Beverages&amp;quot;, 
+    &amp;quot;mostExpensiveProducts&amp;quot;: [
+      {
+        &amp;quot;category&amp;quot;: &amp;quot;Beverages&amp;quot;, 
+        &amp;quot;unitsInStock&amp;quot;: 17, 
+        &amp;quot;productName&amp;quot;: &amp;quot;C\u00c3\u00b4te de Blaye&amp;quot;, 
+        &amp;quot;unitPrice&amp;quot;: 263.5, 
+        &amp;quot;productId&amp;quot;: 38
+      }
+    ]
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Condiments&amp;quot;, 
+    &amp;quot;mostExpensiveProducts&amp;quot;: [
+      {
+        &amp;quot;category&amp;quot;: &amp;quot;Condiments&amp;quot;, 
+        &amp;quot;unitsInStock&amp;quot;: 24, 
+        &amp;quot;productName&amp;quot;: &amp;quot;Vegie-spread&amp;quot;, 
+        &amp;quot;unitPrice&amp;quot;: 43.9, 
+        &amp;quot;productId&amp;quot;: 63
+      }
+    ]
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Produce&amp;quot;, 
+    &amp;quot;mostExpensiveProducts&amp;quot;: [
+      {
+        &amp;quot;category&amp;quot;: &amp;quot;Produce&amp;quot;, 
+        &amp;quot;unitsInStock&amp;quot;: 20, 
+        &amp;quot;productName&amp;quot;: &amp;quot;Manjimup Dried Apples&amp;quot;, 
+        &amp;quot;unitPrice&amp;quot;: 53.0, 
+        &amp;quot;productId&amp;quot;: 51
+      }
+    ]
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Meat/Poultry&amp;quot;, 
+    &amp;quot;mostExpensiveProducts&amp;quot;: [
+      {
+        &amp;quot;category&amp;quot;: &amp;quot;Meat/Poultry&amp;quot;, 
+        &amp;quot;unitsInStock&amp;quot;: 0, 
+        &amp;quot;productName&amp;quot;: &amp;quot;Th\u00c3\u00bcringer Rostbratwurst&amp;quot;, 
+        &amp;quot;unitPrice&amp;quot;: 123.79, 
+        &amp;quot;productId&amp;quot;: 29
+      }
+    ]
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Seafood&amp;quot;, 
+    &amp;quot;mostExpensiveProducts&amp;quot;: [
+      {
+        &amp;quot;category&amp;quot;: &amp;quot;Seafood&amp;quot;, 
+        &amp;quot;unitsInStock&amp;quot;: 42, 
+        &amp;quot;productName&amp;quot;: &amp;quot;Carnarvon Tigers&amp;quot;, 
+        &amp;quot;unitPrice&amp;quot;: 62.5, 
+        &amp;quot;productId&amp;quot;: 18
+      }
+    ]
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Dairy Products&amp;quot;, 
+    &amp;quot;mostExpensiveProducts&amp;quot;: [
+      {
+        &amp;quot;category&amp;quot;: &amp;quot;Dairy Products&amp;quot;, 
+        &amp;quot;unitsInStock&amp;quot;: 79, 
+        &amp;quot;productName&amp;quot;: &amp;quot;Raclette Courdavault&amp;quot;, 
+        &amp;quot;unitPrice&amp;quot;: 55.0, 
+        &amp;quot;productId&amp;quot;: 59
+      }
+    ]
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Confections&amp;quot;, 
+    &amp;quot;mostExpensiveProducts&amp;quot;: [
+      {
+        &amp;quot;category&amp;quot;: &amp;quot;Confections&amp;quot;, 
+        &amp;quot;unitsInStock&amp;quot;: 40, 
+        &amp;quot;productName&amp;quot;: &amp;quot;Sir Rodney&amp;#39;s Marmalade&amp;quot;, 
+        &amp;quot;unitPrice&amp;quot;: 81.0, 
+        &amp;quot;productId&amp;quot;: 20
+      }
+    ]
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Grains/Cereals&amp;quot;, 
+    &amp;quot;mostExpensiveProducts&amp;quot;: [
+      {
+        &amp;quot;category&amp;quot;: &amp;quot;Grains/Cereals&amp;quot;, 
+        &amp;quot;unitsInStock&amp;quot;: 2, 
+        &amp;quot;productName&amp;quot;: &amp;quot;Gnocchi di nonna Alice&amp;quot;, 
+        &amp;quot;unitPrice&amp;quot;: 38.0, 
+        &amp;quot;productId&amp;quot;: 56
+      }
+    ]
+  }
+]
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -223,7 +485,104 @@
 
 &lt;h1 id="toc_1"&gt;Results&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code&gt;{}
+&lt;pre&gt;&lt;code&gt;[
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Beverages&amp;quot;, 
+    &amp;quot;cheapestProducts&amp;quot;: [
+      {
+        &amp;quot;category&amp;quot;: &amp;quot;Beverages&amp;quot;, 
+        &amp;quot;unitsInStock&amp;quot;: 20, 
+        &amp;quot;productName&amp;quot;: &amp;quot;Guaran\u00c3\u00a1 Fant\u00c3\u00a1stica&amp;quot;, 
+        &amp;quot;unitPrice&amp;quot;: 4.5, 
+        &amp;quot;productId&amp;quot;: 24
+      }
+    ]
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Condiments&amp;quot;, 
+    &amp;quot;cheapestProducts&amp;quot;: [
+      {
+        &amp;quot;category&amp;quot;: &amp;quot;Condiments&amp;quot;, 
+        &amp;quot;unitsInStock&amp;quot;: 13, 
+        &amp;quot;productName&amp;quot;: &amp;quot;Aniseed Syrup&amp;quot;, 
+        &amp;quot;unitPrice&amp;quot;: 10.0, 
+        &amp;quot;productId&amp;quot;: 3
+      }
+    ]
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Produce&amp;quot;, 
+    &amp;quot;cheapestProducts&amp;quot;: [
+      {
+        &amp;quot;category&amp;quot;: &amp;quot;Produce&amp;quot;, 
+        &amp;quot;unitsInStock&amp;quot;: 4, 
+        &amp;quot;productName&amp;quot;: &amp;quot;Longlife Tofu&amp;quot;, 
+        &amp;quot;unitPrice&amp;quot;: 10.0, 
+        &amp;quot;productId&amp;quot;: 74
+      }
+    ]
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Meat/Poultry&amp;quot;, 
+    &amp;quot;cheapestProducts&amp;quot;: [
+      {
+        &amp;quot;category&amp;quot;: &amp;quot;Meat/Poultry&amp;quot;, 
+        &amp;quot;unitsInStock&amp;quot;: 21, 
+        &amp;quot;productName&amp;quot;: &amp;quot;Tourti\u00c3\u00a8re&amp;quot;, 
+        &amp;quot;unitPrice&amp;quot;: 7.45, 
+        &amp;quot;productId&amp;quot;: 54
+      }
+    ]
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Seafood&amp;quot;, 
+    &amp;quot;cheapestProducts&amp;quot;: [
+      {
+        &amp;quot;category&amp;quot;: &amp;quot;Seafood&amp;quot;, 
+        &amp;quot;unitsInStock&amp;quot;: 24, 
+        &amp;quot;productName&amp;quot;: &amp;quot;Konbu&amp;quot;, 
+        &amp;quot;unitPrice&amp;quot;: 6.0, 
+        &amp;quot;productId&amp;quot;: 13
+      }
+    ]
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Dairy Products&amp;quot;, 
+    &amp;quot;cheapestProducts&amp;quot;: [
+      {
+        &amp;quot;category&amp;quot;: &amp;quot;Dairy Products&amp;quot;, 
+        &amp;quot;unitsInStock&amp;quot;: 112, 
+        &amp;quot;productName&amp;quot;: &amp;quot;Geitost&amp;quot;, 
+        &amp;quot;unitPrice&amp;quot;: 2.5, 
+        &amp;quot;productId&amp;quot;: 33
+      }
+    ]
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Confections&amp;quot;, 
+    &amp;quot;cheapestProducts&amp;quot;: [
+      {
+        &amp;quot;category&amp;quot;: &amp;quot;Confections&amp;quot;, 
+        &amp;quot;unitsInStock&amp;quot;: 25, 
+        &amp;quot;productName&amp;quot;: &amp;quot;Teatime Chocolate Biscuits&amp;quot;, 
+        &amp;quot;unitPrice&amp;quot;: 9.2, 
+        &amp;quot;productId&amp;quot;: 19
+      }
+    ]
+  }, 
+  {
+    &amp;quot;category&amp;quot;: &amp;quot;Grains/Cereals&amp;quot;, 
+    &amp;quot;cheapestProducts&amp;quot;: [
+      {
+        &amp;quot;category&amp;quot;: &amp;quot;Grains/Cereals&amp;quot;, 
+        &amp;quot;unitsInStock&amp;quot;: 38, 
+        &amp;quot;productName&amp;quot;: &amp;quot;Filo Mix&amp;quot;, 
+        &amp;quot;unitPrice&amp;quot;: 7.0, 
+        &amp;quot;productId&amp;quot;: 52
+      }
+    ]
+  }
+]
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -244,7 +603,372 @@
 
 &lt;h1 id="toc_1"&gt;Results&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code&gt;{}
+&lt;pre&gt;&lt;code&gt;[
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;ALFKI&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 6
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;ANATR&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 4
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;ANTON&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 7
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;AROUT&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 13
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;BERGS&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 18
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;BLAUS&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 7
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;BLONP&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 11
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;BOLID&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 3
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;BONAP&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 17
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;BOTTM&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 14
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;BSBEV&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 10
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;CACTU&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 6
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;CENTC&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 1
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;CHOPS&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 8
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;COMMI&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 5
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;CONSH&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 3
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;DRACD&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 6
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;DUMON&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 4
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;EASTC&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 8
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;ERNSH&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 30
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;FAMIA&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 7
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;FISSA&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 0
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;FOLIG&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 5
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;FOLKO&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 19
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;FRANK&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 15
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;FRANR&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 3
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;FRANS&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 6
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;FURIB&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 8
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;GALED&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 5
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;GODOS&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 10
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;GOURL&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 9
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;GREAL&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 11
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;GROSR&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 2
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;HANAR&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 14
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;HILAA&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 18
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;HUNGC&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 5
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;HUNGO&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 19
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;ISLAT&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 10
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;KOENE&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 14
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;LACOR&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 4
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;LAMAI&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 14
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;LAUGB&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 3
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;LAZYK&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 2
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;LEHMS&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 15
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;LETSS&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 4
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;LILAS&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 14
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;LINOD&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 12
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;LONEP&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 8
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;MAGAA&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 10
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;MAISD&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 7
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;MEREP&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 13
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;MORGK&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 5
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;NORTS&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 3
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;OCEAN&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 5
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;OLDWO&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 10
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;OTTIK&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 9
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;PARIS&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 0
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;PERIC&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 6
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;PICCO&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 10
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;PRINI&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 6
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;QUEDE&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 9
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;QUEEN&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 13
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;QUICK&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 28
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;RANCH&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 5
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;RATTC&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 18
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;REGGC&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 12
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;RICAR&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 11
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;RICSU&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 10
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;ROMEY&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 5
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;SANTG&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 6
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;SAVEA&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 31
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;SEVES&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 9
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;SIMOB&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 7
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;SPECD&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 4
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;SPLIR&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 9
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;SUPRD&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 12
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;THEBI&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 4
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;THECR&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 3
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;TOMSP&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 5
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;TORTU&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 10
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;TRADH&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 7
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;TRAIH&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 3
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;VAFFE&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 11
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;VICTE&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 10
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;VINET&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 4
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;WANDK&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 10
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;WARTH&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 15
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;WELLI&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 9
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;WHITC&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 14
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;WILMK&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 8
+  }, 
+  {
+    &amp;quot;customerId&amp;quot;: &amp;quot;WOLZA&amp;quot;, 
+    &amp;quot;orderCount&amp;quot;: 7
+  }
+]
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -273,7 +997,7 @@
 
 &lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code&gt;{}
+&lt;pre&gt;&lt;code&gt;6.66666666666667
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -302,7 +1026,7 @@
 
 &lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code&gt;{}
+&lt;pre&gt;&lt;code&gt;9
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -331,7 +1055,7 @@
 
 &lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code&gt;{}
+&lt;pre&gt;&lt;code&gt;5
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -360,7 +1084,7 @@
 
 &lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code&gt;{}
+&lt;pre&gt;&lt;code&gt;20
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -396,7 +1120,7 @@
 
 &lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code&gt;{}
+&lt;pre&gt;&lt;code&gt;4.5
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -429,7 +1153,7 @@
 
 &lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code&gt;{}
+&lt;pre&gt;&lt;code&gt;3
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -465,7 +1189,7 @@
 
 &lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code&gt;{}
+&lt;pre&gt;&lt;code&gt;9
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -501,7 +1225,7 @@
 
 &lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code&gt;{}
+&lt;pre&gt;&lt;code&gt;0
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -537,7 +1261,7 @@
 
 &lt;h1 id="toc_2"&gt;Results&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code&gt;{}
+&lt;pre&gt;&lt;code&gt;45
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>

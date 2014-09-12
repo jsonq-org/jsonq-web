@@ -4,7 +4,7 @@
     <title>jsonq.org</title>
     <description>jsonq.org</description>
     <link>http://www.jsonq.org</link>
-    <pubDate>2014-09-02</pubDate>
+    <pubDate>2014-09-12</pubDate>
     <item>
       <title>Archive</title>
       <link>http://www.jsonq.org/archive</link>
@@ -29,11 +29,43 @@
 able to be represented as &lt;a href="http://www.json.org" title="JSON"&gt;JSON&lt;/a&gt; documents. By using JSON messages to represent data operations,
 JSONQ provides a flexible base layer for building asynchronous language bindings.&lt;/p&gt;
 
-&lt;h1 id="toc_1"&gt;Language Bindings&lt;/h1&gt;
+&lt;h1 id="toc_1"&gt;Project Goals&lt;/h1&gt;
+
+&lt;p&gt;The JSONQ project is designed to make developers&amp;#39; lives easier by providing a unified language for
+accessing and querying data.&lt;/p&gt;
+
+&lt;h3 id="toc_2"&gt;Open Specification&lt;/h3&gt;
+
+&lt;p&gt;We aim to provide a detailed and open specification for JSONQ. This will enable anyone to build
+JSONq-compliance into their product whether it is a database, SDK, or web service. This openness will
+also allow us to easily gather and incorporate feedback from everyone using JSONQ.&lt;/p&gt;
+
+&lt;h3 id="toc_3"&gt;Ubiquitous Promotion&lt;/h3&gt;
+
+&lt;p&gt;The more places a technology exists, the more useful it is. We aim to promote JSONQ across the
+software development world to have it supported in major browsers, databases, and webservices.&lt;/p&gt;
+
+&lt;h1 id="toc_4"&gt;Capabilities&lt;/h1&gt;
+
+&lt;p&gt;We envision a world without language barriers when dealing with data sources. Why should developers
+have to treat MySQL any differently than PostgreSQL? Or MongoDB?&lt;/p&gt;
+
+&lt;p&gt;What about Facebook? Twitter? Wikipedia? Fundamentally, these services provide data. Why, then, must
+we treat them differently than traditional databases?&lt;/p&gt;
+
+&lt;p&gt;JSONQ aims to unify the way you talk about &lt;strong&gt;any&lt;/strong&gt; data source, allowing you to easily incorporate
+Facebook data into your business app, join across MySQL and Wikipedia, or join device SMS messages
+with your in-app messaging.&lt;/p&gt;
+
+&lt;h1 id="toc_5"&gt;Language Bindings&lt;/h1&gt;
 
 &lt;p&gt;JSONQ is a language-agnostic specification. If your language of choice can handle JSON, it can be
 used with JSONQ-compliant data sources. Writing JSON queries is not going to save you any time,
 however, so language bindings are expected to be used to fully leverage JSONQ.&lt;/p&gt;
+
+&lt;p&gt;Using language bindings, you can leverage JSONQ on whatever platform you choose: Android, iOS,
+Windows Phone, web, NodeJS, J2EE. Language bindings provide APIs in a language-appropriate
+style, making integration with JSONQ second-nature.&lt;/p&gt;
 
 &lt;p&gt;Some examples of possible bindings are provided below. This is the JSONQ query being demonstrated:&lt;/p&gt;
 
@@ -51,7 +83,7 @@ however, so language bindings are expected to be used to fully leverage JSONQ.&l
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id="toc_2"&gt;Javascript&lt;/h2&gt;
+&lt;h2 id="toc_6"&gt;Javascript&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;var products = jsonq.getStore(&amp;quot;Products&amp;quot;);
 products

@@ -82,27 +82,21 @@
 able to be represented as <a href="http://www.json.org" title="JSON">JSON</a> documents. By using JSON messages to represent data operations,
 JSONQ provides a flexible base layer for building asynchronous language bindings.</p>
 
-<h1 id="toc_1">Language Bindings</h1>
+<h1 id="toc_1">Project Goals</h1>
 
-<p>JSONQ is a language-agnostic specification. If your language of choice can handle JSON, it can be
-used with JSONQ-compliant data sources. Writing JSON queries is not going to save you any time,
-however, so language bindings are expected to be used to fully leverage JSONQ.</p>
+<p>The JSONQ project is designed to make developers' lives easier by providing a unified language for
+accessing and querying data.</p>
 
-<p>Some examples of possible bindings are provided below. This is the JSONQ query being demonstrated:</p>
+<h3 id="toc_2">Open Specification</h3>
 
-<pre><code>{
-    "from": "Products",
-    "as": "p",
-    "group": {
-        "by": "p.category",
-        "into": "cat"
-    },
-    "select": {
-        "category": "cat.key",
-        "products": "cat"
-    }
-}
-</code></pre>
+<p>We aim to provide a detailed and open specification for JSONQ. This will enable anyone to build
+JSONq-compliance into their product whether it is a database, SDK, or web service. This openness will
+also allow us to easily gather and incorporate feedback from everyone using JSONQ.</p>
+
+<h3 id="toc_3">Ubiquitous Promotion</h3>
+
+<p>The more places a technology exists, the more useful it is. We aim to promote JSONQ across the
+software development world to have it supported in major browsers, databases, and webservices.</p>
 </div>
 
         <div class="more">

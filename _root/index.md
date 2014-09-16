@@ -2,6 +2,18 @@
 	"title": "JSONQ"
 }
 
+# Vision
+
+We imagine a world without language barriers when dealing with data sources. Why should developers
+have to treat MySQL any differently than PostgreSQL? Or MongoDB?
+
+What about Facebook? Twitter? Wikipedia? Fundamentally, these services provide data. Why, then, must
+we treat them differently than traditional databases?
+
+JSONQ aims to unify the way you talk about **any** data source, allowing you to easily incorporate
+Facebook data into your business app, join across MySQL and Wikipedia, or join device SMS messages
+with your in-app messaging.
+
 # What is JSONQ?
 
 JSONQ is a JSON-based specification for data access and storage. All operations are, fundamentally,
@@ -11,7 +23,7 @@ JSONQ provides a flexible base layer for building asynchronous language bindings
 
 # Project Goals
 
-The JSONQ project is designed to make developers' lives easier by providing a unified language for
+The JSONQ project is designed to make developers' lives easier by providing a unified specification for
 accessing and querying data.
 
 ### Open Specification
@@ -24,18 +36,6 @@ also allow us to easily gather and incorporate feedback from everyone using JSON
 
 The more places a technology exists, the more useful it is. We aim to promote JSONQ across the
 software development world to have it supported in major browsers, databases, and webservices.
-
-# Capabilities
-
-We envision a world without language barriers when dealing with data sources. Why should developers
-have to treat MySQL any differently than PostgreSQL? Or MongoDB?
-
-What about Facebook? Twitter? Wikipedia? Fundamentally, these services provide data. Why, then, must
-we treat them differently than traditional databases?
-
-JSONQ aims to unify the way you talk about **any** data source, allowing you to easily incorporate
-Facebook data into your business app, join across MySQL and Wikipedia, or join device SMS messages
-with your in-app messaging.
 
 # Language Bindings
 

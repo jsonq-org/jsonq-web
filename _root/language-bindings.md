@@ -36,16 +36,19 @@ Some examples of possible bindings are provided below. This is the JSON/q query 
 		.select(
 			{ "category": "cat.key",
 			  "products": "cat" },
-			function(results) {
-				for (var i=0; i<results.length; i++) {
-					var r = results[i];
-					console.log(
-						"There are " + r.products.length +
-						" products in category '" + r.category+"'" );
+			function(response) {
+				if(response.success) {
+					var results = response.payload;
+					for (var i=0; i<results.length; i++) {
+						var r = results[i];
+						console.log(
+							"There are " + r.products.length +
+							" products in category '" + r.category+"'" );
+					}
+				} else {
+					console.log("An error occurred");
 				}
-			}
-
-		)
+			});
 
 ## Java 7
 

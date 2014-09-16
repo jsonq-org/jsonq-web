@@ -294,11 +294,30 @@ Full-Width Styles
 
 #nav {
   position: absolute;
-  width: 210px;
+  width: 650px;
   z-index: 10;
   bottom: -40px;
   right: 0;
   height: 70px;
+}
+
+#nav li {
+	display: inline-block;
+	list-style: none;
+}
+
+.nav_list {
+	padding-left: 0px;
+}
+
+.nav_item:after {
+	content: "/";
+	padding-left: 5px;
+	color: #fff;
+}
+
+.nav_item:last-child:after {
+		content: "";
 }
 
 .zip_download_link {

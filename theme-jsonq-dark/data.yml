@@ -1,6 +1,7 @@
-title : jsonq.org
-tagline: A JSON-based universal data access language
+title : JSON/q
+tagline: A JSON-based data access specification
 
 navigation :
-  - examples
-  - about
+  - messaging
+  - virtdb
+  - language-bindings

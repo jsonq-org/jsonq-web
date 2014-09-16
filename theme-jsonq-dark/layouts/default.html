@@ -32,23 +32,23 @@
   <body>
 
     <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <!--<a id="forkme_banner" href="https://github.com/jsonq-org/jsonq">View on GitHub</a>-->
+		<div id="header_wrap" class="outer">
+			<header class="inner">
+				<!--<a id="forkme_banner" href="https://github.com/jsonq-org/jsonq">View on GitHub</a>-->
 
-          <a id="project_title" href="{{urls.base_path}}">{{ data.title }}</a>
-					<h2 id="project_tagline">{{ data.tagline }}</h2>
+				<a id="project_title" href="{{urls.base_path}}">{{ data.title }}</a>
+				<h2 id="project_tagline">{{ data.tagline }}</h2>
 
-						<!--TODO: nav-->
-						<section id="nav">
-							<a class="nav_link" href="/examples">Examples</a>
-						</section>
-            <!--<section id="downloads">-->
-              <!--<a class="zip_download_link" href="https://github.com/jsonq-org/jsonq/zipball/master">Download this project as a .zip file</a>-->
-              <!--<a class="tar_download_link" href="https://github.com/jsonq-org/jsonq/tarball/master">Download this project as a tar.gz file</a>-->
-            <!--</section>-->
-        </header>
-    </div>
+				<section id="nav">
+					<ul class="nav_list">
+						{{# data.navigation?to__root }}
+						<li class="nav_item"><a class="nav_link" href="{{url}}">{{title}}</a></li>
+						{{/ data.navigation?to__root }}
+						<li class="nav_item"><a class="nav_link" href="/examples">examples</a></li>
+					</ul>
+				</section>
+			</header>
+		</div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">

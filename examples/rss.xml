@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <rss version="2.0">
   <channel>
-    <title>jsonq.org</title>
-    <description>jsonq.org</description>
+    <title>JSON/q</title>
+    <description>JSON/q</description>
     <link>http://www.jsonq.org</link>
-    <pubDate>2014-09-12</pubDate>
+    <pubDate>2014-09-16</pubDate>
     <item>
       <title>Aggregation operations - conditional count</title>
       <link>http://www.jsonq.org/examples/aggregation/2</link>

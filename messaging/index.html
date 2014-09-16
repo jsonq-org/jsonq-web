@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Aggregation operations - grouped count</title>
+    <title>messaging</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="">
 
@@ -47,59 +47,82 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h1 id="toc_0">Query</h1>
+        <div class="page-header">
+  <!--<h1>messaging </h1>-->
+</div>
 
-<pre><code>{
-  &quot;group&quot;: {
-    &quot;into&quot;: &quot;g&quot;, 
-    &quot;by&quot;: &quot;p.category&quot;
-  }, 
-  &quot;as&quot;: &quot;p&quot;, 
-  &quot;from&quot;: &quot;Products&quot;, 
-  &quot;select&quot;: {
-    &quot;category&quot;: &quot;g.key&quot;, 
-    &quot;productCount&quot;: &quot;g.count()&quot;
-  }
-}
-</code></pre>
+<div class="row-fluid">
+  <div class="span12">
+    <p>JSON/q is a message-based specification. This enables it to be easily ported to many platforms, as
+there is no need to deal with streaming I/O, additional connection protocols, etc.</p>
 
-<h1 id="toc_1">Results</h1>
+<p>Basic JSON/q operations follow a Request-Response model. Responses may be generated at any stage in
+the pipeline while handling a request. In the client-server case, this includes both the client and
+the server.</p>
 
-<pre><code>[
-  {
-    &quot;category&quot;: &quot;Beverages&quot;, 
-    &quot;productCount&quot;: 12
-  }, 
-  {
-    &quot;category&quot;: &quot;Condiments&quot;, 
-    &quot;productCount&quot;: 12
-  }, 
-  {
-    &quot;category&quot;: &quot;Produce&quot;, 
-    &quot;productCount&quot;: 5
-  }, 
-  {
-    &quot;category&quot;: &quot;Meat/Poultry&quot;, 
-    &quot;productCount&quot;: 6
-  }, 
-  {
-    &quot;category&quot;: &quot;Seafood&quot;, 
-    &quot;productCount&quot;: 12
-  }, 
-  {
-    &quot;category&quot;: &quot;Dairy Products&quot;, 
-    &quot;productCount&quot;: 10
-  }, 
-  {
-    &quot;category&quot;: &quot;Confections&quot;, 
-    &quot;productCount&quot;: 13
-  }, 
-  {
-    &quot;category&quot;: &quot;Grains/Cereals&quot;, 
-    &quot;productCount&quot;: 7
-  }
-]
-</code></pre>
+<h2 id="toc_0">Request</h2>
+
+<p>A JSON/q request <strong>must</strong> contain the following attributes:</p>
+
+<ul>
+<li>ID</li>
+<li>type</li>
+<li>payload</li>
+</ul>
+
+<h3 id="toc_1">ID</h3>
+
+<p>The <em>ID</em> is a unique identifier for the request. This field is used to correlate responses with
+requests and fire the proper response handler.</p>
+
+<h3 id="toc_2">Type</h3>
+
+<p>The <em>type</em> field specifies what type of operation is to be performed. Examples include <em>save</em>,
+<em>delete</em>, and <em>query</em>.</p>
+
+<h3 id="toc_3">Payload</h3>
+
+<p>The <em>payload</em> field is any payload required by the operation. In the case of a <em>save</em>, this would
+contain the object to be saved; with a <em>query</em>, the actual query object.</p>
+
+<hr>
+
+<p>The request may contain other fields, depending on the capabilities of the <em>DatabaseProvider</em>. These
+include, but are not limited to, <em>txn_id</em> and <em>args</em>.</p>
+
+<h2 id="toc_4">Response</h2>
+
+<p>A JSON/q response <strong>must</strong> contain the following attributes:</p>
+
+<ul>
+<li>request_id</li>
+<li>success</li>
+<li>payload</li>
+</ul>
+
+<h3 id="toc_5">request_id</h3>
+
+<p>The <em>request_id</em> field is the ID of the request to which this response belongs. This is used 
+for correlating the response with the correct request.</p>
+
+<h3 id="toc_6">Success</h3>
+
+<p>The <em>success</em> field is a boolean field representing whether or not the operation was a success. If
+<code>true</code>, the <em>payload</em> field contains results; if it is <code>false</code>, the <em>payload</em> field will contain an
+error.</p>
+
+<h3 id="toc_7">Payload</h3>
+
+<p>This field holds the payload to be returned to the requestor. Depending on the <em>status</em> field, it
+will either be results from the operation or an error.</p>
+
+<hr>
+
+<p>The response may contain other fields, depending on the capabilities of the <em>DatabaseProvider</em>. These
+include, but are not limited to, <em>txn_id</em>.</p>
+
+  </div>
+</div>
 
       </section>
     </div>

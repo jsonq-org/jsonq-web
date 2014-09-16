@@ -12,7 +12,7 @@
     <![endif]-->
 
     <!-- Le styles -->
-<link href='/assets/stylesheets/stylesheet-5b97a5ac160d4e8098412fd1afefaf9d.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/assets/stylesheets/stylesheet-55c20189fd3a772204853875e89a08e4.css' type='text/css' rel='stylesheet' media='all'>
 <link href='/assets/stylesheets/google_prettify/desert-00eb6f3e954c4591e80db7afede04b30.css' type='text/css' rel='stylesheet' media='all'>
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -26,23 +26,23 @@
   <body>
 
     <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <!--<a id="forkme_banner" href="https://github.com/jsonq-org/jsonq">View on GitHub</a>-->
+		<div id="header_wrap" class="outer">
+			<header class="inner">
+				<!--<a id="forkme_banner" href="https://github.com/jsonq-org/jsonq">View on GitHub</a>-->
 
-          <a id="project_title" href="/">jsonq.org</a>
-					<h2 id="project_tagline">A JSON-based universal data access language</h2>
+				<a id="project_title" href="/">JSON/q</a>
+				<h2 id="project_tagline">A JSON-based data access specification</h2>
 
-						<!--TODO: nav-->
-						<section id="nav">
-							<a class="nav_link" href="/examples">Examples</a>
-						</section>
-            <!--<section id="downloads">-->
-              <!--<a class="zip_download_link" href="https://github.com/jsonq-org/jsonq/zipball/master">Download this project as a .zip file</a>-->
-              <!--<a class="tar_download_link" href="https://github.com/jsonq-org/jsonq/tarball/master">Download this project as a tar.gz file</a>-->
-            <!--</section>-->
-        </header>
-    </div>
+				<section id="nav">
+					<ul class="nav_list">
+						<li class="nav_item"><a class="nav_link" href="/messaging">messaging</a></li>
+						<li class="nav_item"><a class="nav_link" href="/virtdb">virtDB</a></li>
+						<li class="nav_item"><a class="nav_link" href="/language-bindings">language bindings</a></li>
+						<li class="nav_item"><a class="nav_link" href="/examples">examples</a></li>
+					</ul>
+				</section>
+			</header>
+		</div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
@@ -58,6 +58,103 @@
 
         <div class="more">
           <a href="/about" class="btn btn-small">read more..</a>
+        </div>
+      </div>
+      <div class="_root">
+        <h3 class="title"><a href="/language-bindings">language bindings</a> <span class="date"></span></h3>
+
+        <div class="summary ellipsis">
+<h1 id="toc_0">Language Bindings</h1>
+
+<p>JSON/q is a language-agnostic specification. If your language of choice can handle JSON, it can be
+used with JSON/q-compliant data sources. Writing JSON queries is not going to save you any time,
+however, so language bindings are expected to be used to fully leverage JSON/q.</p>
+
+<p>Using language bindings, you can leverage JSON/q on whatever platform you choose: Android, iOS,
+Windows Phone, web, NodeJS, J2EE. Language bindings provide APIs in a language-appropriate
+style, making integration with JSON/q second-nature.</p>
+
+<p>Some examples of possible bindings are provided below. This is the JSON/q query being demonstrated:</p>
+
+<pre><code>{
+    "from": "Products",
+    "as": "p",
+    "group": {
+        "by": "p.category",
+        "into": "cat"
+    },
+    "select": {
+        "category": "cat.key",
+        "products": "cat"
+    }
+}
+</code></pre>
+</div>
+
+        <div class="more">
+          <a href="/language-bindings" class="btn btn-small">read more..</a>
+        </div>
+      </div>
+      <div class="_root">
+        <h3 class="title"><a href="/messaging">messaging</a> <span class="date"></span></h3>
+
+        <div class="summary ellipsis">
+<p>JSON/q is a message-based specification. This enables it to be easily ported to many platforms, as
+there is no need to deal with streaming I/O, additional connection protocols, etc.</p>
+
+<p>Basic JSON/q operations follow a Request-Response model. Responses may be generated at any stage in
+the pipeline while handling a request. In the client-server case, this includes both the client and
+the server.</p>
+
+<h2 id="toc_0">Request</h2>
+
+<p>A JSON/q request <strong>must</strong> contain the following attributes:</p>
+
+<ul>
+<li>ID</li>
+<li>type</li>
+<li>payload</li>
+</ul>
+
+<h3 id="toc_1">ID</h3>
+
+<p>The <em>ID</em> is a unique identifier for the request. This field is used to correlate responses with
+requests and fire the proper response handler.</p>
+</div>
+
+        <div class="more">
+          <a href="/messaging" class="btn btn-small">read more..</a>
+        </div>
+      </div>
+      <div class="_root">
+        <h3 class="title"><a href="/virtdb">virtDB</a> <span class="date"></span></h3>
+
+        <div class="summary ellipsis">
+<h1 id="toc_0">What is virtDB?</h1>
+
+<p>To facilitate JSON/q adoption, we have created an abstraction layer called virtDB. Since JSON/q is
+simply a specification, virtual layers can easily be integrated. VirtDB allows building drivers for
+any data source which does not have native JSON/q support.</p>
+
+<p>At its most basic, virtDB is a pair of APIs: <code>DatabaseProvider</code> and <code>StoreProvider</code>. These describe
+the interaction between JSON/q messages and the underlying storage system.</p>
+
+<h2 id="toc_1">DatabaseProvider</h2>
+
+<p>The <em>DatabaseProvider</em> accepts a JSON/q message, returns a transaction ID, and fires a callback
+(containing a JSON/q response) when the operation is complete. Remember, all JSON/q operations 
+are message-based, so the APIs should be asynchronous where possible.</p>
+
+<p><em>DatabaseProvider</em> is responsible for parsing the JSON/q request, assembling results from the
+store(s), and returning results to the caller. The results are in the form of a JSON/q message, and
+can contain either data or an error, depending on whether or not the operation succeeded.</p>
+
+<h2 id="toc_2">StoreProvider</h2>
+
+</div>
+
+        <div class="more">
+          <a href="/virtdb" class="btn btn-small">read more..</a>
         </div>
       </div>
     
@@ -76,7 +173,7 @@
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-				<p class="copyright">jsonq.org maintained by <a href="https://github.com/jsonq-org">jsonq-org</a></p>
+				<p class="copyright">JSON/q maintained by <a href="https://github.com/jsonq-org">jsonq-org</a></p>
       </footer>
     </div>
 

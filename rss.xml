@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <rss version="2.0">
   <channel>
-    <title>jsonq.org</title>
-    <description>jsonq.org</description>
+    <title>JSON/q</title>
+    <description>JSON/q</description>
     <link>http://www.jsonq.org</link>
-    <pubDate>2014-09-12</pubDate>
+    <pubDate>2014-09-16</pubDate>
     <item>
       <title>Archive</title>
       <link>http://www.jsonq.org/archive</link>
@@ -21,88 +21,41 @@
 </description>
     </item>
     <item>
-      <title>JSONQ</title>
+      <title>JSON/q</title>
       <link>http://www.jsonq.org/</link>
-      <description>&lt;h1 id="toc_0"&gt;What is JSONQ?&lt;/h1&gt;
+      <description>&lt;h1 id="toc_0"&gt;Vision&lt;/h1&gt;
 
-&lt;p&gt;JSONQ is a JSON-based specification for data access and storage. All operations are, fundamentally,
-able to be represented as &lt;a href="http://www.json.org" title="JSON"&gt;JSON&lt;/a&gt; documents. By using JSON messages to represent data operations,
-JSONQ provides a flexible base layer for building asynchronous language bindings.&lt;/p&gt;
-
-&lt;h1 id="toc_1"&gt;Project Goals&lt;/h1&gt;
-
-&lt;p&gt;The JSONQ project is designed to make developers&amp;#39; lives easier by providing a unified language for
-accessing and querying data.&lt;/p&gt;
-
-&lt;h3 id="toc_2"&gt;Open Specification&lt;/h3&gt;
-
-&lt;p&gt;We aim to provide a detailed and open specification for JSONQ. This will enable anyone to build
-JSONq-compliance into their product whether it is a database, SDK, or web service. This openness will
-also allow us to easily gather and incorporate feedback from everyone using JSONQ.&lt;/p&gt;
-
-&lt;h3 id="toc_3"&gt;Ubiquitous Promotion&lt;/h3&gt;
-
-&lt;p&gt;The more places a technology exists, the more useful it is. We aim to promote JSONQ across the
-software development world to have it supported in major browsers, databases, and webservices.&lt;/p&gt;
-
-&lt;h1 id="toc_4"&gt;Capabilities&lt;/h1&gt;
-
-&lt;p&gt;We envision a world without language barriers when dealing with data sources. Why should developers
+&lt;p&gt;We imagine a world without language barriers when dealing with data sources. Why should developers
 have to treat MySQL any differently than PostgreSQL? Or MongoDB?&lt;/p&gt;
 
 &lt;p&gt;What about Facebook? Twitter? Wikipedia? Fundamentally, these services provide data. Why, then, must
 we treat them differently than traditional databases?&lt;/p&gt;
 
-&lt;p&gt;JSONQ aims to unify the way you talk about &lt;strong&gt;any&lt;/strong&gt; data source, allowing you to easily incorporate
+&lt;p&gt;JSON/q aims to unify the way you talk about &lt;strong&gt;any&lt;/strong&gt; data source, allowing you to easily incorporate
 Facebook data into your business app, join across MySQL and Wikipedia, or join device SMS messages
 with your in-app messaging.&lt;/p&gt;
 
-&lt;h1 id="toc_5"&gt;Language Bindings&lt;/h1&gt;
+&lt;h1 id="toc_1"&gt;What is JSON/q?&lt;/h1&gt;
 
-&lt;p&gt;JSONQ is a language-agnostic specification. If your language of choice can handle JSON, it can be
-used with JSONQ-compliant data sources. Writing JSON queries is not going to save you any time,
-however, so language bindings are expected to be used to fully leverage JSONQ.&lt;/p&gt;
+&lt;p&gt;JSON/q is a JSON-based specification for data access and storage. All operations are, fundamentally,
+able to be represented as &lt;a href="http://www.json.org" title="JSON"&gt;JSON&lt;/a&gt; documents. By using JSON messages to represent data operations,
+JSON/q provides a flexible base layer for building asynchronous language bindings.&lt;/p&gt;
 
-&lt;p&gt;Using language bindings, you can leverage JSONQ on whatever platform you choose: Android, iOS,
-Windows Phone, web, NodeJS, J2EE. Language bindings provide APIs in a language-appropriate
-style, making integration with JSONQ second-nature.&lt;/p&gt;
+&lt;h1 id="toc_2"&gt;Project Goals&lt;/h1&gt;
 
-&lt;p&gt;Some examples of possible bindings are provided below. This is the JSONQ query being demonstrated:&lt;/p&gt;
+&lt;p&gt;The JSON/q project is designed to make developers&amp;#39; lives easier by providing a unified specification for
+accessing and querying data.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;{
-    &amp;quot;from&amp;quot;: &amp;quot;Products&amp;quot;,
-    &amp;quot;as&amp;quot;: &amp;quot;p&amp;quot;,
-    &amp;quot;group&amp;quot;: {
-        &amp;quot;by&amp;quot;: &amp;quot;p.category&amp;quot;,
-        &amp;quot;into&amp;quot;: &amp;quot;cat&amp;quot;
-    },
-    &amp;quot;select&amp;quot;: {
-        &amp;quot;category&amp;quot;: &amp;quot;cat.key&amp;quot;,
-        &amp;quot;products&amp;quot;: &amp;quot;cat&amp;quot;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="toc_3"&gt;Open Specification&lt;/h3&gt;
 
-&lt;h2 id="toc_6"&gt;Javascript&lt;/h2&gt;
+&lt;p&gt;We aim to provide a detailed and open specification for JSON/q. This will enable anyone to build
+JSONq-compliance into their product whether it is a database, SDK, or web service. This openness will
+also allow us to easily gather and incorporate feedback from everyone using JSON/q.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var products = jsonq.getStore(&amp;quot;Products&amp;quot;);
-products
-    .as(&amp;quot;p&amp;quot;)
-    .group(&amp;quot;p.category&amp;quot;, &amp;quot;cat&amp;quot;)
-    .select(
-        { &amp;quot;category&amp;quot;: &amp;quot;cat.key&amp;quot;,
-          &amp;quot;products&amp;quot;: &amp;quot;cat&amp;quot; },
-        function(results) {
-            for (var i=0; i&amp;lt;results.length; i++) {
-                var r = results[i];
-                console.log(
-                    &amp;quot;There are &amp;quot; + r.products.length +
-                    &amp;quot; products in category &amp;#39;&amp;quot; + r.category+&amp;quot;&amp;#39;&amp;quot; );
-            }
-        }
+&lt;h3 id="toc_4"&gt;Ubiquitous Promotion&lt;/h3&gt;
 
-    )
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The more places a technology exists, the more useful it is. We aim to promote JSON/q across the
+software development world to have it supported in major browsers, databases, and webservices.&lt;/p&gt;
 </description>
     </item>
     <item>
@@ -117,7 +70,7 @@ products
     &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
   
   
-    &lt;li&gt;&lt;a href="/"&gt;JSONQ&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/"&gt;JSON/q&lt;/a&gt;&lt;/li&gt;
   
     &lt;li class="active"&gt;&lt;a href="/pages" class="active"&gt;Pages&lt;/a&gt;&lt;/li&gt;
   
@@ -127,6 +80,15 @@ products
   
   
     &lt;li&gt;&lt;a href="/about"&gt;about&lt;/a&gt;&lt;/li&gt;
+  
+  
+    &lt;li&gt;&lt;a href="/language-bindings"&gt;language bindings&lt;/a&gt;&lt;/li&gt;
+  
+  
+    &lt;li&gt;&lt;a href="/messaging"&gt;messaging&lt;/a&gt;&lt;/li&gt;
+  
+  
+    &lt;li&gt;&lt;a href="/virtdb"&gt;virtDB&lt;/a&gt;&lt;/li&gt;
   
 &lt;/ul&gt;
 </description>
@@ -145,6 +107,224 @@ products
       <title>about</title>
       <link>http://www.jsonq.org/about</link>
       <description>&lt;h1 id="toc_0"&gt;about JSONQ&lt;/h1&gt;
+</description>
+    </item>
+    <item>
+      <title>language bindings</title>
+      <link>http://www.jsonq.org/language-bindings</link>
+      <description>&lt;h1 id="toc_0"&gt;Language Bindings&lt;/h1&gt;
+
+&lt;p&gt;JSON/q is a language-agnostic specification. If your language of choice can handle JSON, it can be
+used with JSON/q-compliant data sources. Writing JSON queries is not going to save you any time,
+however, so language bindings are expected to be used to fully leverage JSON/q.&lt;/p&gt;
+
+&lt;p&gt;Using language bindings, you can leverage JSON/q on whatever platform you choose: Android, iOS,
+Windows Phone, web, NodeJS, J2EE. Language bindings provide APIs in a language-appropriate
+style, making integration with JSON/q second-nature.&lt;/p&gt;
+
+&lt;p&gt;Some examples of possible bindings are provided below. This is the JSON/q query being demonstrated:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;from&amp;quot;: &amp;quot;Products&amp;quot;,
+    &amp;quot;as&amp;quot;: &amp;quot;p&amp;quot;,
+    &amp;quot;group&amp;quot;: {
+        &amp;quot;by&amp;quot;: &amp;quot;p.category&amp;quot;,
+        &amp;quot;into&amp;quot;: &amp;quot;cat&amp;quot;
+    },
+    &amp;quot;select&amp;quot;: {
+        &amp;quot;category&amp;quot;: &amp;quot;cat.key&amp;quot;,
+        &amp;quot;products&amp;quot;: &amp;quot;cat&amp;quot;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="toc_1"&gt;Javascript&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;var products = jsonq.getStore(&amp;quot;Products&amp;quot;);
+products
+    .as(&amp;quot;p&amp;quot;)
+    .group(&amp;quot;p.category&amp;quot;, &amp;quot;cat&amp;quot;)
+    .select(
+        { &amp;quot;category&amp;quot;: &amp;quot;cat.key&amp;quot;,
+          &amp;quot;products&amp;quot;: &amp;quot;cat&amp;quot; },
+        function(response) {
+            if(response.success) {
+                var results = response.payload;
+                for (var i=0; i&amp;lt;results.length; i++) {
+                    var r = results[i];
+                    console.log(
+                        &amp;quot;There are &amp;quot; + r.products.length +
+                        &amp;quot; products in category &amp;#39;&amp;quot; + r.category+&amp;quot;&amp;#39;&amp;quot; );
+                }
+            } else {
+                console.log(&amp;quot;An error occurred&amp;quot;);
+            }
+        });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="toc_2"&gt;Java 7&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;JsonqStore&amp;lt;Product&amp;gt; products = JSONQ.getStore(&amp;quot;Products&amp;quot;);
+
+JSONObject grouping = new JSONObject();
+grouping.put(&amp;quot;category&amp;quot;, &amp;quot;cat.key&amp;quot;);
+grouping.put(&amp;quot;products&amp;quot;, &amp;quot;cat&amp;quot;);
+
+Callback&amp;lt;JSONObject&amp;gt; callback = new Callback&amp;lt;JSONObject&amp;gt;() {
+    public void onResponse(JSONObject response) {
+        if(response.getBoolean(&amp;quot;success&amp;quot;)) {
+            JSONArray results = response.getJSONArray(&amp;quot;payload&amp;quot;);
+            for (int i=0; i&amp;lt;results.length(); i++) {
+                JSONObject obj = results.getJSONObject(i);
+                JSONArray result = obj.getJSONArray(&amp;quot;products&amp;quot;);
+                System.out.println(
+                        &amp;quot;There are &amp;quot; + result.length() +
+                        &amp;quot; products in category &amp;#39;&amp;quot; + 
+                        obj.getString(&amp;quot;category&amp;quot;) + &amp;quot;&amp;#39;&amp;quot; );
+            }
+        } else {
+            System.out.println(&amp;quot;An error occurred&amp;quot;);
+        }
+    }
+};
+
+products
+    .as(&amp;quot;p&amp;quot;)
+    .group(&amp;quot;p.category&amp;quot;, &amp;quot;cat&amp;quot;)
+    .select(grouping, cb);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="toc_3"&gt;Java 8&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;JsonqStore&amp;lt;Product&amp;gt; products = JSONQ.getStore(&amp;quot;Products&amp;quot;);
+
+JSONObject grouping = new JSONObject();
+grouping.put(&amp;quot;category&amp;quot;, &amp;quot;cat.key&amp;quot;);
+grouping.put(&amp;quot;products&amp;quot;, &amp;quot;cat&amp;quot;);
+
+products
+    .as(&amp;quot;p&amp;quot;)
+    .group(&amp;quot;p.category&amp;quot;, &amp;quot;cat&amp;quot;)
+    .select(
+            grouping,
+            (JSONObject response) -&amp;gt; {
+                if(response.getBoolean(&amp;quot;success&amp;quot;)) {
+                    JSONArray results = response.getJSONArray(&amp;quot;payload&amp;quot;);
+                    for (int i=0; i&amp;lt;results.length(); i++) {
+                        JSONObject obj = results.getJSONObject(i);
+                        JSONArray result = obj.getJSONArray(&amp;quot;products&amp;quot;);
+                        System.out.println(
+                                &amp;quot;There are &amp;quot; + result.length() +
+                                &amp;quot; products in category &amp;#39;&amp;quot; + 
+                                obj.getString(&amp;quot;category&amp;quot;) + &amp;quot;&amp;#39;&amp;quot; );
+                    }
+                } else {
+                    System.out.println(&amp;quot;An error occurred&amp;quot;);
+                }
+            });
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>messaging</title>
+      <link>http://www.jsonq.org/messaging</link>
+      <description>&lt;p&gt;JSON/q is a message-based specification. This enables it to be easily ported to many platforms, as
+there is no need to deal with streaming I/O, additional connection protocols, etc.&lt;/p&gt;
+
+&lt;p&gt;Basic JSON/q operations follow a Request-Response model. Responses may be generated at any stage in
+the pipeline while handling a request. In the client-server case, this includes both the client and
+the server.&lt;/p&gt;
+
+&lt;h2 id="toc_0"&gt;Request&lt;/h2&gt;
+
+&lt;p&gt;A JSON/q request &lt;strong&gt;must&lt;/strong&gt; contain the following attributes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ID&lt;/li&gt;
+&lt;li&gt;type&lt;/li&gt;
+&lt;li&gt;payload&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="toc_1"&gt;ID&lt;/h3&gt;
+
+&lt;p&gt;The &lt;em&gt;ID&lt;/em&gt; is a unique identifier for the request. This field is used to correlate responses with
+requests and fire the proper response handler.&lt;/p&gt;
+
+&lt;h3 id="toc_2"&gt;Type&lt;/h3&gt;
+
+&lt;p&gt;The &lt;em&gt;type&lt;/em&gt; field specifies what type of operation is to be performed. Examples include &lt;em&gt;save&lt;/em&gt;,
+&lt;em&gt;delete&lt;/em&gt;, and &lt;em&gt;query&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id="toc_3"&gt;Payload&lt;/h3&gt;
+
+&lt;p&gt;The &lt;em&gt;payload&lt;/em&gt; field is any payload required by the operation. In the case of a &lt;em&gt;save&lt;/em&gt;, this would
+contain the object to be saved; with a &lt;em&gt;query&lt;/em&gt;, the actual query object.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;The request may contain other fields, depending on the capabilities of the &lt;em&gt;DatabaseProvider&lt;/em&gt;. These
+include, but are not limited to, &lt;em&gt;txn_id&lt;/em&gt; and &lt;em&gt;args&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id="toc_4"&gt;Response&lt;/h2&gt;
+
+&lt;p&gt;A JSON/q response &lt;strong&gt;must&lt;/strong&gt; contain the following attributes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;request_id&lt;/li&gt;
+&lt;li&gt;success&lt;/li&gt;
+&lt;li&gt;payload&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="toc_5"&gt;request_id&lt;/h3&gt;
+
+&lt;p&gt;The &lt;em&gt;request_id&lt;/em&gt; field is the ID of the request to which this response belongs. This is used 
+for correlating the response with the correct request.&lt;/p&gt;
+
+&lt;h3 id="toc_6"&gt;Success&lt;/h3&gt;
+
+&lt;p&gt;The &lt;em&gt;success&lt;/em&gt; field is a boolean field representing whether or not the operation was a success. If
+&lt;code&gt;true&lt;/code&gt;, the &lt;em&gt;payload&lt;/em&gt; field contains results; if it is &lt;code&gt;false&lt;/code&gt;, the &lt;em&gt;payload&lt;/em&gt; field will contain an
+error.&lt;/p&gt;
+
+&lt;h3 id="toc_7"&gt;Payload&lt;/h3&gt;
+
+&lt;p&gt;This field holds the payload to be returned to the requestor. Depending on the &lt;em&gt;status&lt;/em&gt; field, it
+will either be results from the operation or an error.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;The response may contain other fields, depending on the capabilities of the &lt;em&gt;DatabaseProvider&lt;/em&gt;. These
+include, but are not limited to, &lt;em&gt;txn_id&lt;/em&gt;.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>virtDB</title>
+      <link>http://www.jsonq.org/virtdb</link>
+      <description>&lt;h1 id="toc_0"&gt;What is virtDB?&lt;/h1&gt;
+
+&lt;p&gt;To facilitate JSON/q adoption, we have created an abstraction layer called virtDB. Since JSON/q is
+simply a specification, virtual layers can easily be integrated. VirtDB allows building drivers for
+any data source which does not have native JSON/q support.&lt;/p&gt;
+
+&lt;p&gt;At its most basic, virtDB is a pair of APIs: &lt;code&gt;DatabaseProvider&lt;/code&gt; and &lt;code&gt;StoreProvider&lt;/code&gt;. These describe
+the interaction between JSON/q messages and the underlying storage system.&lt;/p&gt;
+
+&lt;h2 id="toc_1"&gt;DatabaseProvider&lt;/h2&gt;
+
+&lt;p&gt;The &lt;em&gt;DatabaseProvider&lt;/em&gt; accepts a JSON/q message, returns a transaction ID, and fires a callback
+(containing a JSON/q response) when the operation is complete. Remember, all JSON/q operations 
+are message-based, so the APIs should be asynchronous where possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;DatabaseProvider&lt;/em&gt; is responsible for parsing the JSON/q request, assembling results from the
+store(s), and returning results to the caller. The results are in the form of a JSON/q message, and
+can contain either data or an error, depending on whether or not the operation succeeded.&lt;/p&gt;
+
+&lt;h2 id="toc_2"&gt;StoreProvider&lt;/h2&gt;
+
+&lt;p&gt;The &lt;em&gt;StoreProvider&lt;/em&gt; is an internal API to be used by the &lt;em&gt;DatabaseProvider&lt;/em&gt;. It allows the
+&lt;em&gt;DatabaseProvider&lt;/em&gt; to provision it, query capabilities, and perform basic CRUD operations. Based on the
+capabilities of the &lt;em&gt;StoreProvider&lt;/em&gt;, other operations including searching, indexing, and transaction
+management may be provided.&lt;/p&gt;
 </description>
     </item>
   </channel>

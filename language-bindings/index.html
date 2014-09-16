@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>language bindings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+<link href='/assets/stylesheets/stylesheet-55c20189fd3a772204853875e89a08e4.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/assets/stylesheets/google_prettify/desert-00eb6f3e954c4591e80db7afede04b30.css' type='text/css' rel='stylesheet' media='all'>
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+		<div id="header_wrap" class="outer">
+			<header class="inner">
+				<!--<a id="forkme_banner" href="https://github.com/jsonq-org/jsonq">View on GitHub</a>-->
+
+				<a id="project_title" href="/">JSON/q</a>
+				<h2 id="project_tagline">A JSON-based data access specification</h2>
+
+				<section id="nav">
+					<ul class="nav_list">
+						<li class="nav_item"><a class="nav_link" href="/messaging">messaging</a></li>
+						<li class="nav_item"><a class="nav_link" href="/virtdb">virtDB</a></li>
+						<li class="nav_item"><a class="nav_link" href="/language-bindings">language bindings</a></li>
+						<li class="nav_item"><a class="nav_link" href="/examples">examples</a></li>
+					</ul>
+				</section>
+			</header>
+		</div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <div class="page-header">
+  <!--<h1>language bindings </h1>-->
+</div>
+
+<div class="row-fluid">
+  <div class="span12">
+    <h1 id="toc_0">Language Bindings</h1>
+
+<p>JSON/q is a language-agnostic specification. If your language of choice can handle JSON, it can be
+used with JSON/q-compliant data sources. Writing JSON queries is not going to save you any time,
+however, so language bindings are expected to be used to fully leverage JSON/q.</p>
+
+<p>Using language bindings, you can leverage JSON/q on whatever platform you choose: Android, iOS,
+Windows Phone, web, NodeJS, J2EE. Language bindings provide APIs in a language-appropriate
+style, making integration with JSON/q second-nature.</p>
+
+<p>Some examples of possible bindings are provided below. This is the JSON/q query being demonstrated:</p>
+
+<pre><code>{
+    &quot;from&quot;: &quot;Products&quot;,
+    &quot;as&quot;: &quot;p&quot;,
+    &quot;group&quot;: {
+        &quot;by&quot;: &quot;p.category&quot;,
+        &quot;into&quot;: &quot;cat&quot;
+    },
+    &quot;select&quot;: {
+        &quot;category&quot;: &quot;cat.key&quot;,
+        &quot;products&quot;: &quot;cat&quot;
+    }
+}
+</code></pre>
+
+<h2 id="toc_1">Javascript</h2>
+
+<pre><code>var products = jsonq.getStore(&quot;Products&quot;);
+products
+    .as(&quot;p&quot;)
+    .group(&quot;p.category&quot;, &quot;cat&quot;)
+    .select(
+        { &quot;category&quot;: &quot;cat.key&quot;,
+          &quot;products&quot;: &quot;cat&quot; },
+        function(response) {
+            if(response.success) {
+                var results = response.payload;
+                for (var i=0; i&lt;results.length; i++) {
+                    var r = results[i];
+                    console.log(
+                        &quot;There are &quot; + r.products.length +
+                        &quot; products in category &#39;&quot; + r.category+&quot;&#39;&quot; );
+                }
+            } else {
+                console.log(&quot;An error occurred&quot;);
+            }
+        });
+</code></pre>
+
+<h2 id="toc_2">Java 7</h2>
+
+<pre><code>JsonqStore&lt;Product&gt; products = JSONQ.getStore(&quot;Products&quot;);
+
+JSONObject grouping = new JSONObject();
+grouping.put(&quot;category&quot;, &quot;cat.key&quot;);
+grouping.put(&quot;products&quot;, &quot;cat&quot;);
+
+Callback&lt;JSONObject&gt; callback = new Callback&lt;JSONObject&gt;() {
+    public void onResponse(JSONObject response) {
+        if(response.getBoolean(&quot;success&quot;)) {
+            JSONArray results = response.getJSONArray(&quot;payload&quot;);
+            for (int i=0; i&lt;results.length(); i++) {
+                JSONObject obj = results.getJSONObject(i);
+                JSONArray result = obj.getJSONArray(&quot;products&quot;);
+                System.out.println(
+                        &quot;There are &quot; + result.length() +
+                        &quot; products in category &#39;&quot; + 
+                        obj.getString(&quot;category&quot;) + &quot;&#39;&quot; );
+            }
+        } else {
+            System.out.println(&quot;An error occurred&quot;);
+        }
+    }
+};
+
+products
+    .as(&quot;p&quot;)
+    .group(&quot;p.category&quot;, &quot;cat&quot;)
+    .select(grouping, cb);
+</code></pre>
+
+<h2 id="toc_3">Java 8</h2>
+
+<pre><code>JsonqStore&lt;Product&gt; products = JSONQ.getStore(&quot;Products&quot;);
+
+JSONObject grouping = new JSONObject();
+grouping.put(&quot;category&quot;, &quot;cat.key&quot;);
+grouping.put(&quot;products&quot;, &quot;cat&quot;);
+
+products
+    .as(&quot;p&quot;)
+    .group(&quot;p.category&quot;, &quot;cat&quot;)
+    .select(
+            grouping,
+            (JSONObject response) -&gt; {
+                if(response.getBoolean(&quot;success&quot;)) {
+                    JSONArray results = response.getJSONArray(&quot;payload&quot;);
+                    for (int i=0; i&lt;results.length(); i++) {
+                        JSONObject obj = results.getJSONObject(i);
+                        JSONArray result = obj.getJSONArray(&quot;products&quot;);
+                        System.out.println(
+                                &quot;There are &quot; + result.length() +
+                                &quot; products in category &#39;&quot; + 
+                                obj.getString(&quot;category&quot;) + &quot;&#39;&quot; );
+                    }
+                } else {
+                    System.out.println(&quot;An error occurred&quot;);
+                }
+            });
+</code></pre>
+
+  </div>
+</div>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+				<p class="copyright">JSON/q maintained by <a href="https://github.com/jsonq-org">jsonq-org</a></p>
+      </footer>
+    </div>
+
+    </div> <!-- /container -->
+
+    <!-- Google Prettify -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+</script>
+<!-- end Google Prettify -->
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-54191340-1']);
+  _gaq.push(['_trackPageview']);
+  
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+  </body>
+</html>

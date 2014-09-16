@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Aggregation operations - grouped count</title>
+    <title>virtDB</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="">
 
@@ -47,59 +47,40 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h1 id="toc_0">Query</h1>
+        <div class="page-header">
+  <!--<h1>virtDB </h1>-->
+</div>
 
-<pre><code>{
-  &quot;group&quot;: {
-    &quot;into&quot;: &quot;g&quot;, 
-    &quot;by&quot;: &quot;p.category&quot;
-  }, 
-  &quot;as&quot;: &quot;p&quot;, 
-  &quot;from&quot;: &quot;Products&quot;, 
-  &quot;select&quot;: {
-    &quot;category&quot;: &quot;g.key&quot;, 
-    &quot;productCount&quot;: &quot;g.count()&quot;
-  }
-}
-</code></pre>
+<div class="row-fluid">
+  <div class="span12">
+    <h1 id="toc_0">What is virtDB?</h1>
 
-<h1 id="toc_1">Results</h1>
+<p>To facilitate JSON/q adoption, we have created an abstraction layer called virtDB. Since JSON/q is
+simply a specification, virtual layers can easily be integrated. VirtDB allows building drivers for
+any data source which does not have native JSON/q support.</p>
 
-<pre><code>[
-  {
-    &quot;category&quot;: &quot;Beverages&quot;, 
-    &quot;productCount&quot;: 12
-  }, 
-  {
-    &quot;category&quot;: &quot;Condiments&quot;, 
-    &quot;productCount&quot;: 12
-  }, 
-  {
-    &quot;category&quot;: &quot;Produce&quot;, 
-    &quot;productCount&quot;: 5
-  }, 
-  {
-    &quot;category&quot;: &quot;Meat/Poultry&quot;, 
-    &quot;productCount&quot;: 6
-  }, 
-  {
-    &quot;category&quot;: &quot;Seafood&quot;, 
-    &quot;productCount&quot;: 12
-  }, 
-  {
-    &quot;category&quot;: &quot;Dairy Products&quot;, 
-    &quot;productCount&quot;: 10
-  }, 
-  {
-    &quot;category&quot;: &quot;Confections&quot;, 
-    &quot;productCount&quot;: 13
-  }, 
-  {
-    &quot;category&quot;: &quot;Grains/Cereals&quot;, 
-    &quot;productCount&quot;: 7
-  }
-]
-</code></pre>
+<p>At its most basic, virtDB is a pair of APIs: <code>DatabaseProvider</code> and <code>StoreProvider</code>. These describe
+the interaction between JSON/q messages and the underlying storage system.</p>
+
+<h2 id="toc_1">DatabaseProvider</h2>
+
+<p>The <em>DatabaseProvider</em> accepts a JSON/q message, returns a transaction ID, and fires a callback
+(containing a JSON/q response) when the operation is complete. Remember, all JSON/q operations 
+are message-based, so the APIs should be asynchronous where possible.</p>
+
+<p><em>DatabaseProvider</em> is responsible for parsing the JSON/q request, assembling results from the
+store(s), and returning results to the caller. The results are in the form of a JSON/q message, and
+can contain either data or an error, depending on whether or not the operation succeeded.</p>
+
+<h2 id="toc_2">StoreProvider</h2>
+
+<p>The <em>StoreProvider</em> is an internal API to be used by the <em>DatabaseProvider</em>. It allows the
+<em>DatabaseProvider</em> to provision it, query capabilities, and perform basic CRUD operations. Based on the
+capabilities of the <em>StoreProvider</em>, other operations including searching, indexing, and transaction
+management may be provided.</p>
+
+  </div>
+</div>
 
       </section>
     </div>

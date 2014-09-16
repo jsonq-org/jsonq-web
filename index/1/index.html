@@ -12,7 +12,7 @@
     <![endif]-->
 
     <!-- Le styles -->
-<link href='/assets/stylesheets/stylesheet-5b97a5ac160d4e8098412fd1afefaf9d.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/assets/stylesheets/stylesheet-55c20189fd3a772204853875e89a08e4.css' type='text/css' rel='stylesheet' media='all'>
 <link href='/assets/stylesheets/google_prettify/desert-00eb6f3e954c4591e80db7afede04b30.css' type='text/css' rel='stylesheet' media='all'>
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -26,23 +26,23 @@
   <body>
 
     <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <!--<a id="forkme_banner" href="https://github.com/jsonq-org/jsonq">View on GitHub</a>-->
+		<div id="header_wrap" class="outer">
+			<header class="inner">
+				<!--<a id="forkme_banner" href="https://github.com/jsonq-org/jsonq">View on GitHub</a>-->
 
-          <a id="project_title" href="/">jsonq.org</a>
-					<h2 id="project_tagline">A JSON-based universal data access language</h2>
+				<a id="project_title" href="/">JSON/q</a>
+				<h2 id="project_tagline">A JSON-based data access specification</h2>
 
-						<!--TODO: nav-->
-						<section id="nav">
-							<a class="nav_link" href="/examples">Examples</a>
-						</section>
-            <!--<section id="downloads">-->
-              <!--<a class="zip_download_link" href="https://github.com/jsonq-org/jsonq/zipball/master">Download this project as a .zip file</a>-->
-              <!--<a class="tar_download_link" href="https://github.com/jsonq-org/jsonq/tarball/master">Download this project as a tar.gz file</a>-->
-            <!--</section>-->
-        </header>
-    </div>
+				<section id="nav">
+					<ul class="nav_list">
+						<li class="nav_item"><a class="nav_link" href="/messaging">messaging</a></li>
+						<li class="nav_item"><a class="nav_link" href="/virtdb">virtDB</a></li>
+						<li class="nav_item"><a class="nav_link" href="/language-bindings">language bindings</a></li>
+						<li class="nav_item"><a class="nav_link" href="/examples">examples</a></li>
+					</ul>
+				</section>
+			</header>
+		</div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
@@ -73,30 +73,31 @@
         </div>
       </div>
       <div class="_root">
-        <h3 class="title"><a href="/">JSONQ</a> <span class="date"></span></h3>
+        <h3 class="title"><a href="/">JSON/q</a> <span class="date"></span></h3>
 
         <div class="summary ellipsis">
-<h1 id="toc_0">What is JSONQ?</h1>
+<h1 id="toc_0">Vision</h1>
 
-<p>JSONQ is a JSON-based specification for data access and storage. All operations are, fundamentally,
+<p>We imagine a world without language barriers when dealing with data sources. Why should developers
+have to treat MySQL any differently than PostgreSQL? Or MongoDB?</p>
+
+<p>What about Facebook? Twitter? Wikipedia? Fundamentally, these services provide data. Why, then, must
+we treat them differently than traditional databases?</p>
+
+<p>JSON/q aims to unify the way you talk about <strong>any</strong> data source, allowing you to easily incorporate
+Facebook data into your business app, join across MySQL and Wikipedia, or join device SMS messages
+with your in-app messaging.</p>
+
+<h1 id="toc_1">What is JSON/q?</h1>
+
+<p>JSON/q is a JSON-based specification for data access and storage. All operations are, fundamentally,
 able to be represented as <a href="http://www.json.org" title="JSON">JSON</a> documents. By using JSON messages to represent data operations,
-JSONQ provides a flexible base layer for building asynchronous language bindings.</p>
+JSON/q provides a flexible base layer for building asynchronous language bindings.</p>
 
-<h1 id="toc_1">Project Goals</h1>
+<h1 id="toc_2">Project Goals</h1>
 
-<p>The JSONQ project is designed to make developers' lives easier by providing a unified language for
+<p>The JSON/q project is designed to make developers' lives easier by providing a unified specification for
 accessing and querying data.</p>
-
-<h3 id="toc_2">Open Specification</h3>
-
-<p>We aim to provide a detailed and open specification for JSONQ. This will enable anyone to build
-JSONq-compliance into their product whether it is a database, SDK, or web service. This openness will
-also allow us to easily gather and incorporate feedback from everyone using JSONQ.</p>
-
-<h3 id="toc_3">Ubiquitous Promotion</h3>
-
-<p>The more places a technology exists, the more useful it is. We aim to promote JSONQ across the
-software development world to have it supported in major browsers, databases, and webservices.</p>
 </div>
 
         <div class="more">
@@ -115,7 +116,7 @@ software development world to have it supported in major browsers, databases, an
     <li><a href="/categories">Categories</a></li>
   
   
-    <li><a href="/">JSONQ</a></li>
+    <li><a href="/">JSON/q</a></li>
   
     <li class="active"><a href="/pages" class="active">Pages</a></li>
   
@@ -125,6 +126,15 @@ software development world to have it supported in major browsers, databases, an
   
   
     <li><a href="/about">about</a></li>
+  
+  
+    <li><a href="/language-bindings">language bindings</a></li>
+  
+  
+    <li><a href="/messaging">messaging</a></li>
+  
+  
+    <li><a href="/virtdb">virtDB</a></li>
   
 </ul>
 </div>
@@ -163,7 +173,7 @@ software development world to have it supported in major browsers, databases, an
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-				<p class="copyright">jsonq.org maintained by <a href="https://github.com/jsonq-org">jsonq-org</a></p>
+				<p class="copyright">JSON/q maintained by <a href="https://github.com/jsonq-org">jsonq-org</a></p>
       </footer>
     </div>
 

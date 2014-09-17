@@ -320,6 +320,10 @@ Full-Width Styles
 		content: "";
 }
 
+.example {
+	text-align: center;
+}
+
 .zip_download_link {
   display: block;
   float: right;
